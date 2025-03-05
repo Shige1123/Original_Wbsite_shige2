@@ -516,12 +516,12 @@ function changeSubtitleForMobile() {
         document.getElementById('daikousushisubtitle').textContent = '天王寺で鮪が3貫150円';
         document.getElementById('dodekasushisubtitle').textContent = '驚愕サイズな超新鮮ネタ';
         document.getElementById('sengokusushisubtitle').textContent = '名古屋最強映え海鮮丼';
+        document.getElementById('chojirotoptitle').innerHTML = '長次郎'
         document.getElementById('chojirosubtitle').textContent = 'ちょっといい日に';
         document.getElementById('other').innerHTML = '日本<br>寿司名店';
         document.getElementById('othersubtitle').textContent = '北海道・北陸・博多';
         document.getElementById('sushisentence').innerHTML = '<br>　「寿司」は日本食文化を象徴する代表的な料理の一つであることは言うまでもない。「寿司」の種類は大きく分けて握り・軍艦・巻・押し・ちらしの5つに分類される。<br><br>　「寿司」は言わずもがな、その鮮度と素材の良さがクオリティを大きく左右する。料理人は魚の選定に非常に慎重を期し、適切なタイミングで仕入れることが重要である。また、寿司はその味だけでなく、見た目にも美しさが求められるため、「寿司」は単なる料理ではなく、一種の芸術性を帯びた作品とも言える。<br><br>　「寿司」は、海外でも多くの寿司屋が見られるほど世界中で人気な食べ物の一つとなっている。ここでは、老若男女・国内外を問わず様々な人々が気軽に足を運ぶことができる、関西圏の誇る最強寿司屋を5つ紹介しよう。<br><br>';
         document.getElementById('subchojiro').textContent = '※西京極店など一部店舗は別メニュー※';
-        document.getElementById('chojirotoptitle').innerHTML = '長次郎'
     } else {
         // それ以外の画面幅の場合は元のテキストに戻す
         document.getElementById('harukomasubtitle').textContent = '大阪屈指の飲み屋街である天満に位置する、コスパ最強江戸前寿司';
