@@ -5,11 +5,13 @@ html{
 }
 
 body {
+    width: 100vw;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     font-family: 'Noto Serif JP', serif;
 }
+
 
 /* From Uiverse.io by JkHuger */
 @keyframes loader_5191 {
@@ -241,19 +243,13 @@ bottom: 10px;
 
 /* タイトルに関して */
 .title {
-    background-image: url(./img/関西から世界へ.png);
-    font-family: "ヒラギノ丸ゴ ProN";
     background-size: cover;
     background-position: center;
-    width: 100vw;
+    width: 100%;
     height: 43vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
-    font-size: 50px;
-    font-weight: bold;
-    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
     z-index: 10;
     /* アニメーションのための初期状態 */
     opacity: 0; /* 最初は透明 */
@@ -262,6 +258,7 @@ bottom: 10px;
     margin-top: 90px;
     margin-bottom: 20px;
 }
+
 
 /* アニメーションの定義 */
 @keyframes fadeInUp {
@@ -427,45 +424,175 @@ main {
     padding-right: 10px;
 }
 
-@media screen and (max-width:780px) {
+
+/* スマホ版！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！ */
+
+@media (max-width: 480px) {
     .title {
-        background-image: url(./img/関西から世界へ.png);
-        background-size: cover;
-        background-position: center;
-        width: 200vw;
-        height: 30vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        font-size: 50px;
-        font-weight: bold;
-        text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
-        z-index: 10;
-        /* アニメーションのための初期状態 */
-        opacity: 0; /* 最初は透明 */
-        transform: translateY(50px); /* 少し下からスタート */
-        animation: fadeInUp 1.5s ease-out forwards; /* アニメーションの適用 */
-        margin-top: 80px;
-        margin-bottom: 30px;
+        height: 20vh; /* スマホ版で高さをビューポート全体に変更 */
+    }
+
+    .emergency {
+        width: 120%;  /* 画像の幅を120%にして大きく表示 */
+        height: auto;  /* 高さは自動調整 */
     }
 
 
+    /* ヘッダーの高さを調整 */
+    header {
+        height: 60px;
+        padding: 5px;
+    }
+
+    /* ハンバーガーメニュー */
+    .hamburger {
+        width: 40px;
+        height: 50px;
+    }
+
+    .hamburger span {
+        height: 1.5px; /* ハンバーガーのバーの高さを少し小さく */
+    }
+
+    /* メニューのアイテムのフォントサイズを小さく */
+    .nav__item a {
+        font-size: 18px;
+        padding: 20px 0;
+    }
+
+    /* ロゴのサイズ調整 */
+    .logo {
+        height: 50px;
+        padding: 5px 10px;
+    }
+
+    /* タイトルのフォントサイズを小さく */
+    .title {
+        font-size: 35px;
+        margin-top: 60px;
+    }
+
+    /* スクロールパディングを調整 */
+    html {
+        scroll-padding-top: 50px;
+    }
+
+    /* 各店舗名前のフォントサイズを小さく */
+    .image-details h2,
+    .image-details h3,
+    .image-details h4,
+    .image-details h5,
+    .image-details h6 {
+        font-size: 24px !important;
+    }
+
+    /* スクエアのアニメーションの速度を少し遅く */
+    .square {
+        width: 8px;
+        height: 8px;
+    }
+
+    #sq1, #sq2, #sq3, #sq4, #sq5, #sq6, #sq7, #sq8, #sq9 {
+        margin: -10px;
+    }
+
+    /* スマホ版のナビゲーションメニュー */
+    .nav {
+        top: 60px; /* メニューの位置を調整 */
+        padding: 15px 5px;
+    }
+
+    /* .aboutsushiのフォントサイズを小さく */
+    .aboutsushi {
+        font-size: 18px; /* フォントサイズを小さく */
+        padding-top: 30px; /* 上部の余白を少し減らす */
+        padding-bottom: 20px; /* 下部の余白を少し減らす */
+    }
+
+    /* #sushisentenceのフォントサイズとパディングを調整 */
     #sushisentence {
-        color: white;
-        background-image: url(./img/日本の誇り鮨.webp);
-        background-color: rgba(51, 50, 50, 0.1);
-        background-size: cover;
-        background-position: center;
-        font-size: 14px;
-        padding: 0 40px;
-        font-weight: bold;
-        text-shadow: 3px 3px 5px rgba(19, 18, 18, 0.7);
+        font-size: 14px; /* フォントサイズを小さく */
+        padding: 0 20px; /* 左右のパディングを減らす */
     }
 
+    /* .image-detailsのフォントサイズとパディング調整 */
+    .image-details {
+        padding: 8px; /* パディングを少し減らす */
+    }
+
+    /* .aboutsushiのフォントサイズを小さく */
+    .aboutsushi {
+        font-size: 18px; /* フォントサイズを小さく */
+        padding-top: 30px; /* 上部の余白を少し減らす */
+        padding-bottom: 20px; /* 下部の余白を少し減らす */
+    }
+
+    /* #sushisentenceのフォントサイズとパディングを調整 */
+    #sushisentence {
+        font-size: 16px; /* フォントサイズを小さく */
+        padding: 0 20px; /* 左右のパディングを減らす */
+    }
+
+
+    /* .image-boxのサイズ調整 */
+    .image-box {
+        border-radius: 6px; /* 角の丸みを少し減らす */
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /* 影を軽く */
+        opacity: 1; /* アニメーションなしで透明度を1に */
+        transform: translateY(0); /* アニメーションを削除 */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* 追加: スムーズなアニメーション */
+    }
+
+    /* .image-boxがホバーされた時の影の強さを少し減らす */
+    .image-box:hover {
+        transform: translateY(-5px); /* 5pxに変更 */
+        box-shadow: 5px 5px 15px 5px rgba(245, 236, 236, 0.3); /* 影を軽く */
+    }
+
+    /* .image-detailsを最初から表示 */
+    .image-details {
+        font-size: 30px; /* フォントサイズを小さく */
+        padding: 8px; /* パディングを少し減らす */
+        opacity: 1; /* 初めから文字を表示させるため、透明度を1に */
+        background-color: rgba(0, 0, 0, 0.6); /* 半透明の黒背景 */
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    /* .image-box imgのズームアニメーションを少し小さく */
+    .image-box img {
+        transition: transform 0.2s ease; /* ズームアニメーションの時間を短く */
+    }
+
+    /* スクロール時のアニメーション */
+    .image-box.visible {
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 0.3s ease, transform 0.3s ease; /* アニメーションの時間を短く */
+    }
+
+    /* スマホ版の文字サイズやスペース調整 */
+    .title {
+        font-size: 28px; /* タイトルを少し小さく */
+    }
+
+
+
+
+
+    #details1,#details2,#details3,#details4,#details5,#details6 {
+        border: 3px solid rgba(233, 227, 227, 0.662);
+        margin: 30px;
+        width: 90%;
+        background-color: rgba(117, 115, 115, 0.6);
+        scroll-margin-top: 100px;
+    }
 
     #details1 > h2 {
-        font-size: 30px;
+        font-size: 25px;
         text-align: center;
         color: white;
         padding: 20px  0px 20px 0px;
@@ -473,8 +600,8 @@ main {
     }
 
     .harukomadetails > img {
-        height: 250px;
-        width: 75%;
+        height: 220px;
+        width: 90%;
         border-radius: 25px;
         padding-bottom: 20px;
     }
@@ -493,14 +620,24 @@ main {
         padding-right: 10px;
     }
 
-    #harukoma, #daikousushi, #dodekasushi, #sengokusushi, #chojiro, #other {
-        font-size: 30px;
+    /* 店舗一覧のところ */
+
+    .image-details h2,
+    .image-details h3,
+    .image-details h4,
+    .image-details h5,
+    .image-details h6 {
+        font-size: 10px;
     }
 
     #harukomasubtitle, #daikousushisubtitle, #dodekasushisubtitle, #sengokusushisubtitle, #chojirosubtitle, #othersubtitle {
-        font-size: 15px;
+        font-size: 12px;
     }
 }
+
+
+
+    
 
 
 /* 続きを読む */
@@ -542,7 +679,7 @@ main {
 }
 
 /* 画面が狭くなってもレイアウトが崩れない */
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 480px) {
     .menu1 {
         font-size: 14px;
         padding: 22px 13px 10px 13px;
@@ -638,9 +775,9 @@ main {
     padding-right: 10px;
 }
 
-@media screen and (max-width:780px) {
+@media screen and (max-width:480px) {
     #details2 > h3 {
-        font-size: 30px;
+        font-size: 25px;
         text-align: center;
         color: white;
         padding: 20px  0px 20px 0px;
@@ -648,8 +785,8 @@ main {
     }
 
     .daikoudetails > img {
-        height: 250px;
-        width: 70%;
+        height: 220px;
+        width: 90%;
         border-radius: 25px;
         padding-bottom: 20px;
     }
@@ -749,9 +886,9 @@ main {
 }
 
 
-@media screen and (max-width:780px) {
+@media screen and (max-width:480px) {
     #details3 > h4 {
-        font-size: 30px;
+        font-size: 25px;
         text-align: center;
         color: white;
         padding: 20px  0px 20px 0px;
@@ -759,8 +896,8 @@ main {
     }
 
     .dodekadetails > img {
-        height: 250px;
-        width: 70%;
+        height: 220px;
+        width: 90%;
         border-radius: 25px;
         padding: 10px;
     }
@@ -857,9 +994,9 @@ main {
 }
 
 
-@media screen and (max-width:780px) {
+@media screen and (max-width:480px) {
     #details4 > h5 {
-        font-size: 30px;
+        font-size: 25px;
         text-align: center;
         color: white;
         padding: 20px  0px 20px 0px;
@@ -867,8 +1004,8 @@ main {
     }
 
     .sengokudetails > img {
-        height: 250px;
-        width: 70%;
+        height: 220px;
+        width: 90%;
         border-radius: 25px;
         padding: 10px;
     }
@@ -963,9 +1100,9 @@ main {
     width: 50%;
 }
 
-@media screen and (max-width:780px) {
+@media screen and (max-width:480px) {
     #details5 > h6 {
-        font-size: 30px;
+        font-size: 25px;
         text-align: center;
         color: white;
         padding: 20px  0px 20px 0px;
@@ -973,8 +1110,8 @@ main {
     }
 
     .chojirodetails > img {
-        height: 250px;
-        width: 70%;
+        height: 220px;
+        width: 90%;
         border-radius: 25px;
         padding: 10px;
     }
@@ -1084,7 +1221,7 @@ main {
     font-size: 15px;
 }
 
-@media screen and (max-width:780px) {
+@media screen and (max-width:480px) {
     .mapgarally {
         display: flex;  
         gap: 20px; /* 各ボックス間隔 */
@@ -1150,7 +1287,7 @@ footer {
 }
 
 .instagram :hover {
-    color: blueviolet;
+    color: rgb(225, 48, 108);
 }
 
 .twitter :hover {
@@ -1160,4 +1297,3 @@ footer {
 .youtube :hover{
     color: red;
 }
-

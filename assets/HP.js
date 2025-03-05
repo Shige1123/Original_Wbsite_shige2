@@ -13,8 +13,53 @@ window.onload = function() {
   };
 
 
+// ハンバーガーメニューの開閉
+const hamburger = document.querySelector(".hamburger");
+const nav = document.querySelector(".nav");
 
-const translations = {
+hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("open");
+    nav.classList.toggle("open");
+});
+
+// メニュー内のリンクをクリックしたときにメニューを閉じる
+document.querySelectorAll(".nav__item a").forEach(link => {
+    link.addEventListener("click", () => {
+        nav.classList.remove("open");
+        hamburger.classList.remove("open");
+    });
+});
+
+//各写真が浮かび上がってくる演出(必要)
+// スクロールイベントを監視
+window.addEventListener('scroll', function() {
+    const imageBoxes = document.querySelectorAll('.image-box');
+    
+    imageBoxes.forEach(function(box) {
+        const rect = box.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        
+        if (rect.top <= windowHeight * 0.8) { // 80%の位置で表示
+            box.classList.add('visible');
+        }
+    });
+});
+
+//アイコン押したらトップページ(必要)
+document.getElementById('logo-icon').addEventListener('click', function() {
+    // トップページ遷移
+    window.location.href = 'index.html';  
+});
+
+
+
+
+
+
+
+
+
+  const translations = {
     ja: {
         humberger1: "日本食文化の象徴",
         humberger2: "店舗一覧",
@@ -103,7 +148,7 @@ const translations = {
         //寿司の説明その２
 
         sushitop2: "日本の随所に眠る至高の寿司屋",
-        sushisentence2: "<br>　某ゲームシステムを導入しているようなチェーン店以外の寿司屋を訪ねる、となるとハードルが高いと考えたり、その雰囲気に恐れ入ってしまう人が多いだろう。実際、寿司というのは嗜好品であり、決して庶民的な食事とは言い難い。また、寿司屋を想像すると、どうしても堅苦しいイメージと直結してしまう。<br><br>　しかし、日本列島には関西圏に留まらず、お手頃な価格で寿司が頂ける名店が各地に眠っている。北海道や北陸地方（富山県・石川県・福井県など）は言わずもがな、福岡県も海鮮で有名な地だ。これらの地を旅で訪れた際に、ぜひとも立ち寄っていただきたい寿司屋を幾らかばかり紹介しよう。<br><br>",
+        sushisentence2: "<br>　街中の老舗寿司屋などを訪ねることはハードルが高いと考えたり、その雰囲気に恐れ入ってしまう人が多いだろう。実際、寿司というのは嗜好品であり、決して庶民的な食事とは言い難い。また、寿司屋を想像すると、どうしても堅苦しいイメージと直結してしまう。<br><br>　しかし、日本列島には関西圏に留まらず、お手頃な価格で寿司が頂ける名店が各地に眠っている。北海道や北陸地方（富山県・石川県・福井県など）は言わずもがな、福岡県も海鮮で有名な地だ。これらの地を旅で訪れた際に、ぜひとも立ち寄っていただきたい寿司屋を幾らかばかり紹介しよう。<br><br>",
 
 
 
@@ -161,7 +206,7 @@ const translations = {
         sushisentence: "<br>　It goes without saying that sushi is one of the most representative dishes that symbolize Japanese food culture. When you hear the word sushi, you probably think of nigiri sushi, but sushi can be broadly divided into five types: nigiri, gunkan, maki（rolled）, oshi（pushed）, and chirashi. <br><br>　It goes without saying that the quality of sushi is greatly affected by its freshness and the quality of the ingredients. Sushi Chefs must be very careful when selecting fish and purchase them at the right time because the type of fish available to catch and the level of its flavor vary depending on the season. In addition, sushi is required to be beautiful not only in taste but also in appearance. When making the sushi, the Sushi chefs take into consideration the temperature of their hands, the strength of his hands, and the amount of moisture, and also considers the balance between the size of the topping and the rice, and makes every effort to bring out the flavor of the ingredients to the fullest. For this reason, sushi is not just food, but can also be considered one kind work of art. <br><br>　Sushi has become one of the most popular foods in the world, with many sushi restaurants now found overseas. Here, we will introduce five of the best sushi restaurants in the Kansai region that are casually people from Japan or overseas could visit.<br><br>",
 
         store_list: "SUSHI RESTAURANT LIST",
-        harukoma: "Harukoma（OSAKA）",
+        harukoma: "Edo-style Nigiri Sushi Harukoma（OSAKA）",
         harukomasubtitle: "Located in one of the famous drinking quarter, Tenma, Osaka",
         daikousushi: "Daikou Sushi（OSAKA）",
         daikousushisubtitle: "Serving 3pieces of tuna sushi, ￥150 only!!",
@@ -171,36 +216,33 @@ const translations = {
         sengokusushisubtitle: "The Most Famous Sushi Restaurant In NAGOYA City",
         chojiro: "Nigiri Chojiro（HYOGO）",
         chojirosubtitle: "Expensive conveyor belt sushi restaurant, famous in Kansai area",
-        other: "Other Than KANSAI Area",
+        other: "Except KANSAI Region",
         othersubtitle: "HOKKAIDO・KANAZAWA・FUKUI・HAKATA",
-        oshinagaki: "JAPANESE MENU（￥）",
-        oshinagaki2: "JAPANESE MENU（￥）",
-        oshinagaki3: "JAPANESE MENU（￥）",
-        oshinagaki4: "JAPANESE MENU（￥）",
-        oshinagaki5: "JAPANESE MENU（￥）",
+        oshinagaki: "JAPANESE MENU<br>（￥）",
+        oshinagaki2: "JAPANESE MENU<br>（￥）",
+        oshinagaki3: "JAPANESE MENU<br>（￥）",
+        oshinagaki4: "JAPANESE MENU<br>（￥）",
+        oshinagaki5: "JAPANESE MENU<br>（￥）",
 
 
         store_details: "SUSHI RESTAURANT DETAILS",
 
-        harukomatoptitle: "Harukoma（OSAKA）",
-        harukomatoptitledetail: "　'Harukoma' is an Edomae sushi restaurant located in Tenma area. In the Tenma area, where many sushi restaurants are lined up, it is the No.1 sushi restaurant in the area, with long lines at both the main store and branch all day long. <br><br>　There are an impressive more than 100 types of menu, and each sushi topping is so large. In addition, the main store's specialty, 'clam red miso soup', is filled with many and large clams. It's the most popular side dish. Whenever you go, you have to wait in line many hours, however, it's worth to visit.",
+        harukomatoptitle: "Edo-style Nigiri Sushi Harukoma（OSAKA）",
+        harukomatoptitledetail: "　'Harukoma' is an Edomae sushi restaurant located in Tenma area. In the Tenma area, where many sushi restaurants are lined up, it is the No.1 sushi restaurant in the area, with long lines at both the main store and branch all day long. <br><br>　There are an impressive more than 100 types of menu, and each sushi topping is so large. In addition, the main store's specialty, clam red miso soup, is filled with many and large clams. It's the most popular side dish. Whenever you go, you have to wait in line many hours, however, it's worth to visit.",
         
         daikousushitoptitle: "DAIKOU SUSHI（OSAKA）",
-        daikousushitoptitledetail: "　Daiko Sushi is located in the Tennoji area, which is the thirdest famous sightseeing spots in Osaka. You can enjoy sushi made by a skilled chef, and the price is so reasobable. You can eat 3 pieces of tuna at ￥150. Another attractive feature is that the most employee could speak English, so you won't be confused the way to order or asking some questions. <br><br>　In addition, you can visit Daikou Sushi restraunt befor or after you enjoy the sightseeing spots called 'Shinsekai', 'Tsutenkaku' and 'Abeno Harukas' because the restraunt is located in Tennnoji area as mentioned earlier.",
+        daikousushitoptitledetail: "　Daiko Sushi is located in the Tennoji area, which is the thirdest famous sightseeing spots in Osaka. You can enjoy sushi made by a skilled chef, and the price is so reasobable. You can eat 3 pieces of tuna at ￥150. Another attractive feature is that the most employee could speak English, so you won't be confused the way to order or asking some questions. <br><br>　In addition, you can visit Daikou Sushi restraunt befor or after you enjoy the sightseeing spots called Shinsekai, Tsutenkaku and Abeno Harukas because the restraunt is located in Tennnoji area as mentioned earlier.",
         
         dodekasushitoptitle: "DODEKA SUSHI（OSAKA）",
-        dodekasushitoptitledetail: "　'Dodeka Sushi' is located in Minamimorimachi, one stop from Osaka Station on the Osaka Metro Tanimachi（T） Line. If the restraunt name 'Dodeka' translated into English, the name change into 'BIG SUSHI RESTAURANT'. As the name suggests, the sushi they serve is so big. <br><br>　Of course, nigiri sushi is so big, inaddition, the rolled sushi is also naturally big, so you're sure to be satisfied no matter what menu you choose. ",
+        dodekasushitoptitledetail: "　'Dodeka Sushi' is located in Minamimorimachi, one stop from Osaka Station on the Osaka Metro Tanimachi（T） Line. The meaning of Dodeka is BIG in English, so the English name of this restraunt is 'BIG SUSHI'. As the name suggests, the sushi they serve is so big. <br><br>　Of course, nigiri sushi is so big, inaddition, the rolled sushi is also naturally big, so you're sure to be satisfied no matter what menu you choose. ",
         
         sengokusushitoptitle: "SENGOKU SUSHI（NAGOYA）",
-        sengokusushitoptitledetail: "　Nagoya also has a long-established sushi restaurant with the best value for money. 'Sengoku Sushi' is conveniently located just a 5-minute walk from Nagoya Station. Not only during dinner time, but during lunch time as well, many customers from all over the country now visit the restaurant in search of an impressive seafood bowl that looks great on social media. <br><br>　The most popular menu item during lunch hours is the 'Seasonal Special Lunch Seafood Bowl'. It is a masterpiece that includes about 8 types of fresh. Also, when you visit Nagoya, you can enjoy local foods: 'Miso Tonkatsu', 'Kishimen（kind of noodles）, 'Hitsumabushi'.",
+        sengokusushitoptitledetail: "　Nagoya also has a long-established sushi restaurant with the best value for money. 'Sengoku Sushi' is conveniently located just a 5-minute walk from Nagoya Station. Not only during dinner time, but during lunch time as well, many customers from all over the country now visit the restaurant in search of an impressive seafood bowl that looks great on social media. <br><br>　The most popular menu item during lunch hours is the Seasonal Special Lunch Seafood Bowl. It is a masterpiece that includes about 8 types of fresh. Also, when you visit Nagoya, you can enjoy the specific local foods: Miso Tonkatsu, Kishimen（kind of noodles）, Hitsumabushi.",
         
         chojirotoptitle: "NIGIRI CHOJIRO（HYOGO）",
-        chojirotoptitledetail: "　Although 'Chojiro' is a chain restaurant that operates mainly in the Kansai region as a conveyor belt sushi restaurant, the quality is comparable to that of sushi restaurants with only a counter seating restraunt. The signature dish, 'Bluefin Tuna Feast', as well as the 'Fresh Horse Mackerel' and 'Live Abalone', which are taken out of the tank and cooked immediately after recieved the order, are extremely fresh. In addition to the regular menu, seasonal dishes are regularly updated, so sometimes high-end ingredients such as 'ark shell', 'tiger prawn', and 'botan shrimp' are also on the menu. <br><br>　You order the menu from the tachpanel that compatible with English, Chinese and Korean, so you don't have to talk with staff and you can order easily.",
+        chojirotoptitledetail: "　Although 'Chojiro' is a chain restaurant that operates mainly in the Kansai region as a conveyor belt sushi restaurant, the quality is comparable to that of sushi restaurants with only a counter seating restraunt. The signature dish, Bluefin Tuna Feast, as well as the Fresh Horse Mackerel and Live Abalone, which are taken out of the tank and cooked immediately after recieved the order, are extremely fresh. In addition to the regular menu, seasonal dishes are regularly updated, so sometimes high-end ingredients such as ark shell, tiger prawn, and botan shrimp are also on the menu. <br><br>　You order the menu from the tablet that compatible with English, Chinese and Korean, so you don't have to talk with staff and you can order easily.",
 
         subchojiro: "※SOME RESTAURANT HAVE THE DIFFERENT MENU and PRICE※",
-
-
-
 
 
         store_map: "SUSHI RESTAURANT INFORMATION",
@@ -208,7 +250,7 @@ const translations = {
         
         harukomashop: "Harukoma（OSAKA）",
         harukomatrain: "STA: Osaka Loop Line, Tenma sta.",
-        harukomatime: "TME: Except Fri. 11:00~21:30",
+        harukomatime: "TME: Except on Fri. 11:00~21:30",
         harukomapay: "PMT: Cash, Credit Card",
         harukomareservation: "RSV: Unavailable",
 
@@ -240,21 +282,13 @@ const translations = {
         chojiropay: "PMT: All things Available",
         chojiroreservation: "RSV: Available only on Weekdays",
 
-        shikou: "FAMOUS SUSHI RESTRAUNT other than KANSAI AREA",
-        toritontitle: "TORITON（HOKKAIDO）",
-        uogashititle: "UOGASHI SHOKUDO ICHIBA TEN（KANAZAWA）",
-        uoshintitle: "UOSHIN（FUKUI）",
-        toyoichititle: "HAKATA TOYOICHI（HAKATA）",
-
-        sushitop2: "Famousu Sushi Restaurant Other than Kansai Area",
-        sushisentence2: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
         
 
         //サブページ----------------------------------------------------------------------------
         //HUMBERGER MENU
         
         humberger0: "THE FINEST SUSHI RESTAURANTS IN JAPAN",
-        humberger11: "Conveyor Belt Sushi Restraunt TORITON<br>（HOKKAIDO）",
+        humberger11: "TORITON<br>（HOKKAIDO）",
         humberger12: "UOGASHI SYOKUDO<br>（KANAZAWA）",
         humberger13: "UOSHIN<br>（FUKUI）",
         humberger14: "HAKATA TOYOICHI<br>（HAKATA）",
@@ -263,7 +297,7 @@ const translations = {
         //寿司の説明その２
 
         sushitop2: "THE FINEST SUSHI RESTRAUNT IN JAPAN",
-        sushisentence2: "<br>　Sushi is one of the luxury Japanese foods and cannot eat it everyday easily. However, throughout the Japan, not just in the Kansai region, there are renowned sushi restaurants where you can enjoy sushi at reasonable prices. Hokkaido and the Hokuriku region（Kanazawa city, Fukui city and so on） go without saying, and Hakata city is also famous for its seafood. <br><br>　I would like to introduce a few sushi restaurants that you should definitely visit when you travel to these areas.<br><br>",
+        sushisentence2: "<br>　Sushi is one of the luxury Japanese foods and cannot eat it everyday easily. However, throughout the Japan, not just in the Kansai region, there are renowned sushi restaurants where you can enjoy sushi at reasonable prices. Hokkaido and the Hokuriku region（Kanazawa city, Fukui city and so on） go without saying, and Hakata city is also famous for its seafood. <br><br>　I would like to introduce a few sushi restaurants that you should definitely visit when you travel to these areas. I hope you to enjoy all over the Japan from Japanese foods to spectacular sighseeing spot! Also, I would like you say 'I want to come back Japan Again!!'<br><br>",
 
 
 
@@ -271,7 +305,7 @@ const translations = {
 
 
         toritontoptitle2: "Conveyor Belt Sushi Restraunt TORITON<br>（HOKKAIDO）",
-        toritondetail: "　'Conveyor belt sushi restraunt Toriton' is a sushi restaurant that originated in Hokkaido. The store is full of energy and smiles because they always consider how to entertain the customers. <br><br>　According to the company's efforts, you can enjoy the sushi with reasonable price. Some of the main menu items are tuna (270), salmon (220), sweet shrimp (170), Hokkaido octopus legs (270), Hokkaido raw hokki gunkan (270), Hokkaido scallops (310), and Hokkaido salmon roe marinated in soy sauce (430) (all served as 2 pieces per plate, excluding tax). The favorite sushi for foreigners  is Seafood salad gunkan and Salmon.<br><br>　In addition to Hokkaido region, there are three branches in Tokyo: Atre Shinagawa, Skytree Town Solamachi, and Ikebukuro Tobu, so you can enjoy the same quality without having to visit Hokkaido.",
+        toritondetail: "　'Conveyor belt sushi restraunt Toriton' is a sushi restaurant that originated in Hokkaido. The restraunt is full of energy and smiles because they always consider how to entertain the customers. <br><br>　According to the company's efforts, you can enjoy the sushi with reasonable price. Some of the main menu items are tuna (270), salmon (220), sweet shrimp (170), Hokkaido octopus legs (270), Hokkaido raw hokki gunkan (270), Hokkaido scallops (310), and Hokkaido salmon roe marinated in soy sauce (430) (all served as 2 pieces per plate, excluding tax). The favorite sushi for foreigners  is Seafood salad gunkan and Salmon.<br><br>　In addition to Hokkaido region, there are three branches in Tokyo: Atre Shinagawa, Skytree Town Solamachi, and Ikebukuro Tobu, so you can enjoy the same quality without having to visit Hokkaido.",
 
         uogashitoptitle2: "UOGASHI SYOKUDO<br>（KANAZAWA）",
         uogashidetail: "　Ishikawa Prefecture has the rich seafood ground. The environment of ocean allows wide variety of seafood to be landed. Among them, Nodoguro (rosy seabass), known as the KING of white body fish, is so famous. <br><br>　Ishikawa Pref., especially Kanazawa City, is one of the leading sighseeing spots in Japan. If you focus only on seafood, you will find the Omicho Ichiba（Omichi Market） about 10 minutes from Kanazawa Station. However, although the market is the famous tourist destination where you can enjoy eating and walking around, the prices of foods have skyrocketed due to the influx of tourists from both Japan and abroad.<br><br>　Therefore, the locals recommend another market called the Kanazawa Chuou Ichiba（Central Wholesale Market）, located about 20 minutes on foot from the Omicho Market. At that area, 'Uogashi Shokudo' serves high-quality seafood bowls and sushi at low prices.",
@@ -422,12 +456,12 @@ function changeLanguage() {
     
     
     //サブページハンバーガー
-        document.getElementById("humberger0").innerHTML = translations[lang].humberger0;
-        document.getElementById("humberger11").innerHTML = translations[lang].humberger11;
-        document.getElementById("humberger12").innerHTML = translations[lang].humberger12;
-        document.getElementById("humberger13").innerHTML = translations[lang].humberger13;
-        document.getElementById("humberger14").innerHTML = translations[lang].humberger14;
-        document.getElementById("humberger15").innerHTML = translations[lang].humberger15;
+    document.getElementById("humberger0").querySelector("a").innerHTML = translations[lang].humberger0;
+    document.getElementById("humberger11").querySelector("a").innerHTML = translations[lang].humberger11;
+    document.getElementById("humberger12").querySelector("a").innerHTML = translations[lang].humberger12;
+    document.getElementById("humberger13").querySelector("a").innerHTML = translations[lang].humberger13;
+    document.getElementById("humberger14").querySelector("a").innerHTML = translations[lang].humberger14;
+    document.getElementById("humberger15").querySelector("a").innerHTML = translations[lang].humberger15;
     
         
         document.getElementById("toritontoptitle2").innerHTML = translations[lang].toritontoptitle2;
@@ -474,48 +508,41 @@ function changeLanguage() {
 }
 
 
-// ハンバーガーメニューの開閉
-const hamburger = document.querySelector(".hamburger");
-const nav = document.querySelector(".nav");
+// スマホ版の画面幅でテキストを変更する関数
+function changeSubtitleForMobile() {
+    // 画面幅が480px以下の場合
+    if (window.innerWidth <= 480) {
+        document.getElementById('harukomasubtitle').textContent = '大阪天満のNO.1江戸前寿司';
+        document.getElementById('daikousushisubtitle').textContent = '大阪天王寺で鮪が3貫150円';
+        document.getElementById('dodekasushisubtitle').textContent = '超新鮮ネタを驚愕サイズで';
+        document.getElementById('sengokusushisubtitle').textContent = '名古屋最強「映え海鮮丼」';
+        document.getElementById('chojirosubtitle').textContent = '長次郎でちょっといい日に';
+        document.getElementById('other').textContent = '日本寿司名店';
+        document.getElementById('othersubtitle').textContent = '北海道・北陸・博多';
+        document.getElementById('sushisentence').innerHTML = '<br>　「寿司」は日本食文化を象徴する代表的な料理の一つであることは言うまでもない。「寿司」の種類は大きく分けて握り・軍艦・巻・押し・ちらしの5つに分類される。<br><br>　「寿司」は言わずもがな、その鮮度と素材の良さがクオリティを大きく左右する。料理人は魚の選定に非常に慎重を期し、適切なタイミングで仕入れることが重要である。また、寿司はその味だけでなく、見た目にも美しさが求められるため、「寿司」は単なる料理ではなく、一種の芸術性を帯びた作品とも言える。<br><br>　「寿司」は、海外でも多くの寿司屋が見られるほど世界中で人気な食べ物の一つとなっている。ここでは、老若男女・国内外を問わず様々な人々が気軽に足を運ぶことができる、関西圏の誇る最強寿司屋を5つ紹介しよう。<br><br>';
+        document.getElementById('subchojiro').textContent = '※西京極店など一部店舗は別メニュー※';
+    } else {
+        // それ以外の画面幅の場合は元のテキストに戻す
+        document.getElementById('harukomasubtitle').textContent = '大阪屈指の飲み屋街である天満に位置する、コスパ最強江戸前寿司';
+        document.getElementById('daikousushisubtitle').textContent = 'キタ・ミナミに次ぐ繁華街である天王寺エリアで、3貫150円から';
+        document.getElementById('dodekasushisubtitle').textContent = '店名通りの大盤振る舞いに留まらず、そのクオリティも一級品';
+        document.getElementById('sengokusushisubtitle').textContent = '名古屋屈指の最強寿司屋、「仙石すし」がここにある';
+        document.getElementById('chijirosubtitle').textContent = '関西を中心に店舗展開しており、高級廻転寿司として名高い';
+        document.getElementById('other').textContent = 'その他の寿司処';
+        document.getElementById('othersubtitle').textContent = '日本寿司名店録（北海道・石川・福井・福岡）';
+        document.getElementById('sushisentence').innerHTML = '<br>　「寿司」は日本食文化を象徴する代表的な料理の一つであることは言うまでもない。一般的に「寿司」と耳にすると思い浮かぶのは「握り寿司」だろうが、「寿司」の種類は大きく分けて握り・軍艦・巻・押し・ちらしの5つに分類される。巻寿司は海苔で具材を巻いた形態で手軽に食べることができるため、家庭でも「手巻き寿司」や節分の「恵方巻」として振る舞われることもしばしばあるだろう。<br><br>　「寿司」は言わずもがな、その鮮度と素材の良さがクオリティを大きく左右する。料理人は魚の選定に非常に慎重を期し、適切なタイミングで仕入れることが重要である。仕入れた当日の鮮度が旨味の直結するものもあれば、数日間寝かせたり、昆布締めなど施すことにより身や旨味が凝縮されるものもある。また、寿司はその味だけでなく、見た目にも美しさが求められる。板前は握る際に手の温度や力加減、水分量に配慮し、ネタの大きさとシャリのバランスを考慮したうえで、素材の味を最大限に引き立てるように工夫を凝らす。そのため、「寿司」は単なる料理ではなく、一種の芸術性を帯びた作品とも言える。<br><br>　「寿司」は、海外でも多くの寿司屋が見られるほど世界中で人気な食べ物の一つとなっている。ここでは、老若男女・国内外を問わず様々な人々が気軽に足を運ぶことができる、関西圏の誇る最強寿司屋を5つ紹介しよう。<br><br>';
+        document.getElementById('subchojiro').textContent = '※廻転寿司CHOJIRO・にぎり長次郎 西京極店は一部別メニュー※';
+        document.getElementById('').textContent = '';
+        document.getElementById('').textContent = '';
+    }
+}
 
-hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("open");
-    nav.classList.toggle("open");
-});
+// ページ読み込み時にフレーズを変更
+changeSubtitleForMobile();
 
-// メニュー内のリンクをクリックしたときにメニューを閉じる
-document.querySelectorAll(".nav__item a").forEach(link => {
-    link.addEventListener("click", () => {
-        nav.classList.remove("open");
-        hamburger.classList.remove("open");
-    });
-});
+// 画面サイズ変更時にもフレーズを変更
+window.addEventListener('resize', changeSubtitleForMobile);
 
-
-//各写真が浮かび上がってくる演出(必要)
-// スクロールイベントを監視
-window.addEventListener('scroll', function() {
-    const imageBoxes = document.querySelectorAll('.image-box');
-    
-    imageBoxes.forEach(function(box) {
-        const rect = box.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
-        
-        if (rect.top <= windowHeight * 0.8) { // 80%の位置で表示
-            box.classList.add('visible');
-        }
-    });
-});
-
-
-
-
-
-//アイコン押したらトップページ(必要)
-document.getElementById('logo-icon').addEventListener('click', function() {
-    // トップページ遷移
-    window.location.href = 'index.html';  
-});
 
 
 document.getElementById("scrollLeft").addEventListener("click", function() {
@@ -533,6 +560,8 @@ document.getElementById("scrollRight").addEventListener("click", function() {
         behavior: 'smooth'  // スムーズにスクロール
     });
 });
+
+
 
 
 
