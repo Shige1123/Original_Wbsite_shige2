@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>関西圏の寿司屋さん紹介</title>
+    <link rel="stylesheet" href="./assets/reset.css" />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    
+<!-- ローディングアニメーション -->
+<div class="loader" id="loader">
+    <div class="square" id="sq1"></div>
+    <div class="square" id="sq2"></div>
+    <div class="square" id="sq3"></div>
+    <div class="square" id="sq4"></div>
+    <div class="square" id="sq5"></div>
+    <div class="square" id="sq6"></div>
+    <div class="square" id="sq7"></div>
+    <div class="square" id="sq8"></div>
+    <div class="square" id="sq9"></div>
+  </div>
+
+  <div id="content">
+<header class="header">
+        <div class="header-left">
+            <img class="logo" src="./assets/img/寿ロゴ.jpg" alt="" id="logo-icon">
+            <div class="language-selector">
+                <label for="language" class="language">LANGUAGE:</label>
+                <select id="language" onchange="changeLanguageIndex()">
+                    <option value="ja">日本語</option>
+                    <option value="en">ENGLISH</option>
+                </select>
+            </div>
+        </div>
+            <button type="button" class="hamburger">
+                <span></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item" id="humberger1"><a href="#sushitop">日本食文化の象徴</a></li> <!-- 寿司紹介セクション -->
+                    <li class="nav__item" id="humberger2"><a href="#store_list">店舗一覧</a></li> <!-- 店舗一覧セクション -->
+                    <li class="nav__item" id="humberger3"><a href="#store_details">店舗紹介</a></li> <!-- 店舗詳細セクション -->
+                    <li class="nav__item" id="humberger4"><a href="#store_map">店舗情報</a></li>
+                </ul>
+            </nav>
+    </header>
+    
+    <main>
+        <section class="sushi">
+            <h1 class="title"></h1>
+        </section>
+<section class="aboutsushi" id="sushitop">日本食文化の象徴 </section>
+<section id="sushisentence"><br>　「寿司」は日本食文化を象徴する代表的な料理の一つであることは言うまでもない。一般的に「寿司」と耳にすると思い浮かぶのは「握り寿司」だろうが、「寿司」の種類は大きく分けて握り・軍艦・巻・押し・ちらしの5つに分類される。巻寿司は海苔で具材を巻いた形態で手軽に食べることができるため、家庭でも「手巻き寿司」や節分の「恵方巻」として振る舞われることもしばしばあるだろう。<br><br>　「寿司」は言わずもがな、その鮮度と素材の良さがクオリティを大きく左右する。料理人は魚の選定に非常に慎重を期し、適切なタイミングで仕入れることが重要である。仕入れた当日の鮮度が旨味の直結するものもあれば、数日間寝かせたり、昆布締めなど施すことにより身や旨味が凝縮されるものもある。また、寿司はその味だけでなく、見た目にも美しさが求められる。板前は握る際に手の温度や力加減、水分量に配慮し、ネタの大きさとシャリのバランスを考慮したうえで、素材の味を最大限に引き立てるように工夫を凝らす。そのため、「寿司」は単なる料理ではなく、一種の芸術性を帯びた作品とも言える。<br><br>　「寿司」は、海外でも多くの寿司屋が見られるほど世界中で人気な食べ物の一つとなっている。ここでは、所謂「コース料理」のみを提供しているような高級カウンター寿司屋ではなく、国内外問わず様々な人々が気軽に足を運ぶことができる、関西圏の誇る最強寿司屋を5つ紹介しよう。<br><br></section>
+            
+<section class="subtitle1" id="store_list">店舗一覧</section>
+<section>
+            <section class="sushi-gallery">
+                <div class="image-box">
+                    <img src="./assets/img/大阪天満春駒.jpg" alt="春駒">
+                    <div class="image-details">
+                    <a href="#details1" class="link_to_details"><h2 class="about" id="harukoma">春駒</h2></a>
+                        <p id="harukomasubtitle">大阪屈指の飲み屋街である天満に位置する、コスパ最強江戸前寿司</p>
+                    </div>
+                </div>
+                <div class="image-box">
+                    <img src="./assets/img/大興寿司トップ画像.jpg" alt="大興寿司">
+                    <div class="image-details">
+                        <a href="#details2" class="link_to_details"><h3 class="toptitle" id="daikousushi">大興寿司</h3></a>
+                        <p id="daikousushisubtitle">キタ・ミナミに次ぐ繁華街である天王寺エリアで、３貫１５０円から</p>
+                    </div>
+                </div>
+                <div class="image-box">
+                    <img src="./assets/img/どでか寿司トップ画像.jpg" alt="どでか寿司">
+                    <div class="image-details">
+                    <a href="#details3" class="link_to_details"><h2 class="toptitle" id="dodekasushi">どでか寿司</h2></a>
+                        <p id="dodekasushisubtitle">店名通りの大盤振る舞いに留まらず、そのクオリティも一級品</p>
+                    </div>
+                </div>
+                <div class="image-box">
+                    <img src="./assets/img/仙石すしトップ画像.jpg" alt="仙石すし">
+                    <div class="image-details">
+                        <a href="#details4" class="link_to_details"><h4 class="toptitle" id="sengokusushi">仙石すし</h4></a>
+                        <p id="sengokusushisubtitle">名古屋屈指の最強寿司屋、「仙石すし」がここにある</p>
+                    </div>
+                </div>
+                <div class="image-box">
+                    <img src="./assets/img/にぎり長次郎芦屋店.jpg" alt="にぎり長次郎">
+                    <div class="image-details">
+                        <a href="#details5" class="link_to_details"><h5 class="toptitle" id="chojiro">にぎり長次郎</h5></a>
+                        
+                        <p id="chojirosubtitle">関西を中心に店舗展開しており、高級廻転寿司として名高い</p>
+                    </div>
+                </div>
+
+                <div class="image-box">
+                    <img src="./assets/img/日本地図.jpg" alt="その他エリア">
+                    <div class="image-details">
+                        <a href="./subpage.html" class="link_to_details"><h6 class="toptitle" id="other">その他の寿司処</h6></a>
+                        
+                        <p id="othersubtitle">日本寿司名店録（北海道・石川・福井・福岡）</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section class="subtitle2" id="store_details">店舗紹介</section>
+        <section id="details1">
+            <h2 id="harukomatoptitle">春駒</h2>
+            <section class="harukomadetails">
+                <p class="harukomacentence" id="harukomatoptitledetail">
+                    　大阪駅から、大阪環状線（外回り）で一駅の天満駅にある江戸前寿司屋『春駒』。多くの寿司屋が立ち並ぶ天満エリアで本店・支店を問わず終日、大行列を成す同エリアNo.1の寿司屋である。<br><br>　メニューの種類は圧巻の100種以上であり、どの寿司ネタもサイズが大きく食べ応えもある。また、本店の名物である「あさりの赤出汁」はビッグサイズのあさりがゴロゴロ入っており、売り切れ御免の人気サイドメニューとなっている。ランチタイムの盛況具合では、本店・支店問わずディナー帯になると寿司ネタが完売続出となることもある。大阪最強とも呼べる『春駒』、是非とも早い時間に訪れていただきたい。
+                </p>
+                
+                <img src="./assets/img/春駒　店舗詳細写真①.jpg" alt="">
+        
+        </section>
+        <div class="readmore">
+            <input id="readmore" type="checkbox">
+            <label for="readmore"></label>
+            <div class="readmore-content">
+            <p class="oshinagaki" id="oshinagaki">おしながき</p>
+            <div class="menu1">
+                <span>【握り寿司】（各種２貫）</span><span>【細巻き】</span><span>【手巻き】（細巻きは+50円で承ります）</span><span>【一品料理】</span>
+                <span>げそ（100）</span><span>きゅうり巻き・しんこう巻き（各100）</span><span>納豆巻き（100）</span><span>げそ塩焼き（500）</span>
+                
+                <span>玉子（150）</span><span>鉄火巻き（250）</span><span>山芋巻き（100）</span><span>貝柱塩焼き（950）</span>
+                
+                <span>まぐろ（200）</span><span>いかきゅう巻き・うなきゅう巻き（各350）</span><span>しそ巻き（100）</span><span>たこ酢（600）</span>
+                
+                <span>いか・たこ（各200）</span><span>とろ鉄火巻き（400）</span><span>山ごぼう巻き（100）</span><span>とり貝酢味噌（950）</span>
+                
+                <span>はまち（300）</span><span>ねぎとろ巻き・親子巻き（各550）</span><span>ツナサラダ巻き（200）</span><span>玉子付き出し（550）</span>
+                
+                <span>あじ（300）</span><span></span><span>蟹みそ巻き（200）</span><span>蟹みそ付き出し（550）</span>
+                
+                <span>煮込み穴子・うなぎ（各300）</span><span></span><span>サーモン巻き（250）</span><span>まぐろ山かけ（800）</span>
+                
+                <span>いわし（300）</span><span></span><span>海老サラダ巻き（350）</span><span>鯛あら煮（900）</span>
+                
+                <span>蟹（300）</span><span></span><span>蟹サラダ巻き（350）</span><span>造り盛り合わせ（950）</span>
+                
+                <span>サーモン・鯛（各300）</span><span></span><span></span><span>魚赤だし（300）</span>
+                
+                <span>貝柱（300）</span><span></span><span></span><span>玉子赤だし（350）</span>
+                
+                <span>かれいえんがわ（300）</span><span></span><span></span><span>あさり赤だし（550）(本店限定)</span>
+                
+                <span>はまち腹（350）</span><span></span><span></span><span></span>
+                
+                <span>平目・平目えんがわ（各400）</span><span></span><span></span><span></span>
+                
+                <span>赤貝・とり貝・つぶ貝（各400）</span><span></span><span></span><span></span>
+                
+                <span>うに・いくら・数の子（各400）</span><span></span><span></span><span></span>
+                
+                <span>さざえ（400）</span><span></span><span></span><span></span>
+                
+                <span>しまあじ（400）</span><span></span><span></span><span></span>
+                
+                <span>子持ち昆布（400）</span><span></span><span></span><span></span>
+                
+                <span>サーモン腹（400）</span><span></span><span></span><span></span>
+                
+                <span>上うなぎ・サーモン腹（各450（炙））</span><span></span><span></span><span></span>
+                
+                <span>鯛三種盛り（450）</span><span></span><span></span><span></span>
+            </div>
+        
+            </div>
+        </div>
+    </section>
+    
+    
+        <section id="details2">
+            <h3 id="daikousushitoptitle">大興寿司</h3>
+            <section class="daikoudetails">
+                <p class="daikoucentence" id="daikousushitoptitledetail">
+                        　梅田のキタエリア、難波のミナミエリアに次ぐ繁華街である天王寺エリアに『大興寿司』は店を構える。職人が握る寿司を堪能でき、マグロが３貫１５０円からという某回転寿司チェーン店も驚愕する圧巻のコスパである。看板のメニューが定期的に更新されており、訪れる度に異なる握りを楽しめることも魅力的だ。<br><br>　寿司だけではなく、「馬刺し」や「うなぎの肝」、立派な鯛のあら煮である「かぶと煮」などのサイドメニューが豊富であり、数十種類もの用意がある。
+                    </p>
+                    <img src="./assets/img/大興寿司写真②.jpg" alt="">
+        </section>
+        <div class="readmore1">
+            <input id="readmore1" type="checkbox">
+            <label for="readmore1"></label>
+            <div class="readmore1-content">
+            <p class="oshinagaki" id="oshinagaki2">おしながき</p>
+            <div class="menu1">
+                <span>【にぎり】</span><span>【巻き】</span><span>【お造り】</span><span>【一品料理】</span>
+                <span>[各種３貫（150）]</span><span>胡瓜巻（150）</span><span>本マグロ大トロ（2,500）</span><span>タラ白子付出し（750）</span>
+                
+                <span>さば・いわし・このしろ</span><span>かんぴょう巻（150）</span><span>本マグロ赤身（800）</span><span>たい皮ポン酢（350）</span>
+                
+                <span>たい皮</span><span>奈良漬巻（150）</span><span>サヨリ（650）</span><span>赤貝肝ポン酢（350）</span>
+
+                <span>玉子</span><span>新香巻（150）</span><span>サザエ（650）</span><span>カニミソ付出し（350）</span>
+
+                <span>あなご</span><span>納豆巻（150）</span><span>かつお（650）</span><span>子持ち昆布（450）</span>
+
+                <span>たこ</span><span>しそ巻（150）</span><span>かわはぎ（肝付）（850）</span><span>うなぎ肝（450）</span>
+
+                <span>まぐろ</span><span>鉄火巻（200）</span><span>つぶ貝（650）</span><span>生くらげ（450）</span>
+                
+                <span>[各種３貫（200）]</span><span>穴胡巻（200）</span><span>ブリ（800）</span><span>酒蒸しあさり（450）</span>
+
+                <span>げそ</span><span>うな胡巻（200）</span><span>ブリトロ（1,000）</span><span>魚・玉子吸い物（各150）</span>
+
+                <span>いか</span><span>かにマヨ巻（300）</span><span>たちうお（650）</span><span>あさり吸い物（300）</span>
+
+                <span>[各種３貫（300）]</span><span>えびマヨ巻（300）</span><span>ながす鯨尾の身（980）</span><span>かわはぎ付け（980）</span>
+
+                <span>平目</span><span></span><span>※その他、ご希望承ります。</span><span>かつおタタキ（650）</span>
+
+                <span>はまち・カンパチ</span><span></span><span></span><span>あんこう肝付出し（750）</span>
+                <span>鯛・サーモン・しまあじ</span><span></span><span></span><span>鯛骨蒸し（850）</span>
+                <span>かつお</span><span></span><span></span><span>鯛あらだき（850）</span>
+                <span>うなぎ</span><span></span><span></span><span>ブリタイかま塩焼き（850）</span>
+                <span>貝柱・かき</span><span></span><span></span><span>毛ガニ（2,800）</span>
+                <span>えび・かに</span><span></span><span></span><span>サザエつぼ焼き（650）</span>
+                <span>とり貝・かにみそ（２貫）</span><span></span><span></span><span>ウニ付出し（1,800）</span>
+                <span>[各種３貫（400）]</span><span></span><span></span><span>かま塩焼き（650）</span>
+                <span>かわはぎ（肝付）</span><span></span><span></span><span>大あさりしょうゆ焼（650）</span>
+                <span>いくら・数の子</span><span></span><span></span><span>下足塩焼き（650）</span>
+                <span>甘えび（２貫）</span><span></span><span></span><span>ほたるいか・鯨おばけ（各350）</span>
+                <span>煮込みあなご（２貫）</span><span></span><span></span><span>子持ちシャコ（600）</span>
+                <span>[各種３貫（500）]</span><span></span><span></span><span>ふぐ白子塩焼き（980）</span>
+                <span>炙りうなぎ</span><span></span><span></span><span></span>
+                <span>赤貝</span><span></span><span></span><span></span>
+                <span>あわび（２貫）</span><span></span><span></span><span></span>
+                <span>とろ（２貫）</span><span></span><span></span><span></span>
+                <span>[その他]</span><span></span><span></span><span></span>
+                <span>うに（２貫・600）</span><span></span><span></span><span></span>
+                <span>[時価]</span><span></span><span></span><span></span>
+                <span>車えび・ボタンえび・のどぐろ</span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span>
+
+              
+            </div>
+            </div>
+        </div>
+    </section>
+        
+
+        <section id="details3">
+            <h4 id="dodekasushitoptitle">どでか寿司</h4>
+            <section class="dodekadetails">
+                <p class="dodekacentence" id="dodekasushitoptitledetail">
+                        　大阪駅から谷町線で一駅の南森町に店を構えている『どでか寿司』。ここは店名の通り、寿司の大きさを売りとしている。単にサイズが大きいだけでなく、鯛や鰯など、ものによってはネタを2枚重ねにして握るという太っ腹さには衝撃だ。握りに加え、巻物も当然ビッグサイズであり、納豆巻などでさえ太巻きとも思えるような大きさで提供されるというように、どのメニューを選んでも満足感を得られること間違いないだろう。<br><br>　店内は分煙となっているほか、大人数の歓送迎会なども受け付けているので、多種多様なシチュエーションで利用可能だ。
+                </p>
+                    <img src="./assets/img/どでか寿司　店舗詳細写真①.jpg" alt="">
+        </section>
+        <div class="readmore2">
+            <input id="readmore2" type="checkbox">
+            <label for="readmore2"></label>
+            <div class="readmore2-content">
+              <p class="oshinagaki" id="oshinagaki3">おしながき</p>
+              <div class="menu1">
+                <span>【お寿司（1皿2貫）】</span><span>【細巻き】</span><span>【どでかシリーズ】</span><span>【盛合・一品・お造り】</span>
+                <span>（172円）</span><span>（281円）</span><span>どでか盛り（2,200）</span><span>にぎり普通盛（743）</span>
+                <span>いわし・とろろ・げそ・玉子</span><span>イカキュウ巻・明太子巻</span><span>どでか巻き（743）</span><span>にぎり上盛（1,470）</span>
+                <span>（255円）</span><span>納豆巻・しそ巻・キュウリ巻・新香巻</span><span>どでかあさり（638）</span><span>海鮮丼（952）</span>
+                <span>ブリポン酢</span><span>本ワサビ巻</span><span>どでかまぐろ（743）</span><span>赤だし（198）</span>
+                <span>蒸しホタテ</span><span>（407円）</span><span>どでかサーモン（743）</span><span>あら汁（319）</span>
+                <span>づけ白身・づけブリ</span><span>エビマヨ巻・サーモンマヨ巻</span><span>どでかネギトロ（743）</span><span>茶碗蒸し（380）</span>
+                <span>アボカド</span><span>鉄火巻・鉄キュウ巻</span><span>どでかうに（2,200）</span><span>お造り（各種）</span>
+                <span>たこ</span><span>穴キュウ巻</span><span>どでか盛り（2,200）</span><span>サラダ（各種）</span>
+                <span>（407円）</span><span>ウインナー巻・アボカド巻・ごぼう巻</span><span></span><span>焼き物（各種）</span>
+                <span>まぐろ・づけまぐろ・炙りまぐろ</span><span>はまちしそ巻・いかしそ巻</span><span></span><span>揚げ物（各種）</span>
+                <span>カニ味噌</span><span>イカタコメンタイ巻</span><span></span><span>酢の物（各種）</span>
+                <span>はまち・カンパチ</span><span>ごぼうサラダ巻・牛サラダ巻</span><span></span><span></span>
+                <span>赤えび</span><span>（457円）</span><span></span><span></span>
+                <span>鯛</span><span>ネギトロ巻</span><span></span><span></span>
+                <span>ホッキ貝</span><span>エビサラダ巻</span><span></span><span></span>
+                <span>えんがわ</span><span>エビサモマグマヨ巻</span><span></span><span></span>
+                <span>（457円）</span><span></span><span></span><span></span>
+                <span>えび</span><span></span><span></span><span></span>
+                <span>赤貝</span><span></span><span></span><span></span>
+                <span>穴子　煮込み</span><span></span><span></span><span></span>
+                <span>炙り中トロ</span><span></span><span></span><span></span>
+                <span>数の子</span><span></span><span></span><span></span>
+                <span>（561円）</span><span></span><span></span><span></span>
+                <span>中トロ</span><span></span><span></span><span></span>
+                <span>いかうに</span><span></span><span></span><span></span>
+                <span>うなぎ　炙り</span><span></span><span></span><span></span>
+                <span>親子</span><span></span><span></span><span></span>
+                <span>（666円）</span><span></span><span></span><span></span>
+                <span>いくら</span><span></span><span></span><span></span>
+                <span>う肉</span><span></span><span></span><span></span>
+
+
+
+            </div>
+            </div>
+        </div>
+    </section>
+
+        <section id="details4">
+            <h5 id="sengokusushitoptitle">仙石すし</h5>
+            <section class="sengokudetails">
+                <p class="sengokucentence" id="sengokusushitoptitledetail">
+                        　主要関西圏から新幹線でおよそ50分、名古屋にもコスパ最強な老舗寿司屋が存在する。名駅から徒歩5分の好立地に『仙石すし』はある。ディナー時間はもちろんのこと、ランチ帯には圧巻リュームでSNS映えな海鮮丼を求めて、現在では全国から多くの客が足を運ぶようになった。<br><br>　ランチ帯で最も人気なメニューは「季節のスペシャルランチ海鮮丼」である。日によって異なる新鮮なおすすめ鮮魚が約8種も盛り込まれた逸品である。ここでは主に、有名なランチメニューを紹介したい。
+                    </p>
+                    <img src="./assets/img/仙石すし海鮮丼.jpg" alt="">
+        </section>
+        <div class="readmore3">
+            <input id="readmore3" type="checkbox">
+            <label for="readmore3"></label>
+            <div class="readmore3-content">
+            <p class="oshinagaki" id="oshinagaki4">おしながき</p>
+            <div class="menu1">
+                <span>【海鮮丼（ランチ限定）】</span><span>【海鮮丼】</span><span>【握り(ランチ限定)・一品（ランチ価格）】</span><span>【コース料理】</span>
+
+                <span>季節のスペシャルランチ海鮮丼<br>並：1,700、大：2,150<br><br></span><span>特盛いくら鉄火丼<br>並：1,850、大：2,450<br><br></span><span>スペシャルランチ握り<br>1人前：1,700</span><span>特上握り５貫・舟盛・和牛鉄板焼き<br>『飲み放題宴会10,000コース』</span>
+
+                <span>ランチ特選５色丼<br>並：1,150、大：1,520<br><br></span><span>まぐろサーモンスペシャル海鮮丼<br>並：1,850、大：2,270<br><br></span><span>中トロ入りスペシャルランチ握り<br>1人前：1,420</span><span>上握り５貫・舟盛<br>『飲み放題宴会8,000コース』</span>
+
+                <span>ランチ５色づけ丼<br>並：1,130、大：1,500<br><br></span><span>特盛いくらサーモン鉄火丼<br>並：1,850、大：2,520</span><span>ランチ天ぷら<br>（300）<br></span><span>握り５貫・舟盛<br>『飲み放題宴会7,000コース』</span>
+                
+                <span>ランチ特選７色丼<br>並：1,580、大：1,950<br><br></span><span>特盛特選５色丼<br>並：1,850、大：2,270</span><span>まぐろ中落ち<br>（300）<br><br></span><span>日替り５貫・豚角煮<br>『飲み放題宴会6,500コース』</span>
+                
+                <span>ランチ特選７色丼<br>並：1,580、大：1,950<br><br></span><span></span><span>フライドポテト<br>（300）<br><br></span><span>日替握り３貫・玉子焼き<br>『飲み放題宴会5,500コース』</span>
+                
+                <span></span><span></span><span>まぐろのから揚げ（４～５個）<br>（300）<br><br></span>
+                <span>特上握り・鉄板焼・焼魚<br>『すし満足8,000コース』</span>
+                
+                <span></span><span></span><span>特大ねぎまどてみそ串カツ（１本）<br>（350）<br><br></span>
+                <span>大海老フライ・握り８貫など<br>『すし満足6,500コース』<br><br></span>
+
+                <span></span><span></span><span>ポテトサラダ<br>（300）<br><br></span><span>特選８貫・焼穴子<br>『すし満足5,500コース』</span>
+            </div>
+        </div>
+        </div>
+    </section>
+
+        <section id="details5">
+            <h6 id="chojirotoptitle">にぎり長次郎</h6>
+            <section class="chojirodetails">
+                <p class="chojirocentence" id="chojirotoptitledetail">
+                        　主に関西圏で廻転寿司として事業展開しているチェーン店だが、カウンターだけの寿司屋に引けを取らないクオリティである。看板メニューの「本マグロ三昧」や、注文後に生簀から取り出して調理する「泳がし鯵」や「活アワビ」は新鮮さ抜群である。レギュラーメニューに加え、季節メニューが定期的に更新されるため、時には「赤貝」や「車海老」、「ボタン海老」といった高級ネタもメニュー表に名を連ねる。<br><br>　また、節分やひな祭りなどのイベントに即した商品や、店舗限定で季節会席も取り扱っており、さまざまな場面で利用できる。サイドメニューやデザートメニューも季節ごとに変更となるため、一年を通して様々な料理を愉しむことができる。
+                </p>
+                    <img src="./assets/img/にぎり長次郎本鮪三昧.jpg" alt="">
+        </section>
+        <div class="readmore4">
+            <input id="readmore4" type="checkbox">
+            <label for="readmore4"></label>
+            <div class="readmore4-content">
+                <p class="oshinagaki" id="oshinagaki5">おしながき<br><p class="suboshinagaki" id="subchojiro">※廻転寿司CHOJIRO・にぎり長次郎 西京極店は一部別メニュー※</p></p>
+                <div class="menu1">
+                    <span>【にぎり】</span><span>【巻物・軍艦】</span><span>【サイドメニュー】</span><span>【御膳・お造り・季節会席】</span>
+                    
+                    <span>めばちまぐろ（360）</span><span>いくら（580）</span><span>サラダ（各580）</span><span>「花ひとひら」（1,980）</span>
+                    
+                    <span>漬けまぐろ（360）</span><span>ねぎとろ軍艦（680）</span><span>赤だし（魚・豆腐）（各190）</span><span>「伏見」（2,380）</span>
+                    
+                    <span>アボカドまぐろ（430）</span><span>かいわれまぐろ巻（290）</span><span>温泉玉子の赤だし（320）</span><span>「鞍馬」（2,680）</span>
+                    
+                    <span>本まぐろ赤身（480）</span><span>鉄火細巻（360）</span><span>はまぐり（赤だし・吸物）（各430）</span><span>「八坂」（3,180）</span>
+                    
+                    <span>本まぐろ中とろ（680）</span><span>本まぐろ鉄火（480）</span><span>うどん（昆布・きつね）（各430）</span><span>「夜定食」（2,970）</span>
+                    
+                    <span>本まぐろ大とろ（880）</span><span>本まぐろ涙鉄火（580）</span><span>うどん（天ぷら・にしん）（各530）</span><span>長次郎盛り（2,480）</span>
+                    
+                    <span>本まぐろ三昧（1,020）</span><span>本まぐろとろ鉄火（680）</span><span>うどん（とり天・温玉）（各430）</span><span>海の幸5点盛り（1,300）</span>
+                    
+                    <span>サーモン（炙・オニオン）（各430）</span><span>ねぎとろ巻（680）</span><span>長次郎グラタン（480）</span><span>本まぐろ造り盛り（1,800）</span>
+                    
+                    <span>サーモン三昧（ノーマル・オニオン・炙）（630）</span><span>とろたく巻（680）</span><span>いわし煮付（300）</span><span>ひらめ昆布〆お造り（1,080）</span>
+                    
+                    <span>サーモンいくらのせ・とろサーモン（各430）</span><span>梅かいわれ巻（190）</span><span>まぐろ串焼き（640）</span><span>活あわびお造り（1,480）</span>
+                    
+                    <span>つぶ貝（バター醤油）（各360）</span><span>サーモンアボカド巻（480）</span><span>熱々玉子の付き出し（380）</span><span>【季節会席（※店舗限定※）】</span>
+                    
+                    <span>〆鯖（290）・京鯖寿司（360）</span><span>いわし煮付軍艦（240）</span><span>たこ酢（530）</span><span>東方美人（特上寿司）（6,480）</span>
+                    
+                    <span>泳がし鯵（1,380）</span><span>蟹みそ軍艦（360）</span><span>海老天ぷら盛り合わせ（880）</span><span>花鳥風月（上寿司）（4,980）</span>
+                    
+                    <span>はまち・かんぱち（炙）（各430）</span><span>ツナ軍艦・コーン・納豆（各130）</span><span>海老フライと串揚げ盛り（790）</span><span>寿司花伝（寿司+8品）（3,980）</span>
+                    
+                    <span>極上はまち・かんぱち腹（480）</span><span>海老フライロール（360）</span><span>国産とり天（580）</span><span>雅 ～みやび～（3,280）</span>
+                    
+                    <span>鯛（炙）（各430）</span><span>海老サラダ巻（360）</span><span>国産とり天南蛮（630）</span><span>※会席お取り扱い店舗※</span>
+                    
+                    <span>ひらめ昆布〆・レモン塩（各530）</span><span>シーサラダ（190）</span><span>海老フライ（480）</span><span>（京都府）宝ヶ池</span>
+                    
+                    <span>焼穴子（360）</span><span>納豆・きゅうり・ツナ細巻（各190）</span><span>ポテトフライ（350）</span><span>（大阪府）茨木真砂・長居公園通り・寝屋川本店・和泉中央・上野芝</span>
+                    
+                    <span>煮穴子（２貫・530）</span><span>新香・梅胡しそ・涙巻（各190）</span><span></span><span>（兵庫県）北神戸・神戸住吉</span>
+                    
+                    <span>煮穴子一本にぎり（680）</span><span>長次郎巻（360）</span><span></span><span>（奈良県）押熊</span>
+                    
+                    <span>うなぎ（530）</span><span>国産とり天南蛮巻（360）</span><span></span><span>（大阪府（CHOJIRO））法善寺Hozenji Flagship Store</span>
+                    
+                    <span>海老（290）</span><span>アボカド巻（290）</span><span></span><span></span>
+                    
+                    <span>海老三昧（ノーマル・タルタル・アボカド）（480）</span><span></span><span></span><span></span>
+                    
+                    <span>甘海老（680）</span><span></span><span></span><span></span>
+                    
+                    <span>いか（290）</span><span></span><span></span><span></span>
+                    
+                    <span>真だこ（360）</span><span></span><span></span><span></span>
+                    
+                    <span>ほたて（炙・バター磯部巻）（各580）</span><span></span><span></span><span></span>
+                    
+                    <span>煮あわび（650）</span><span></span><span></span><span></span>
+                    
+                    <span>炙り三昧（うなぎ・サーモン・ほたて）（770）</span><span></span><span></span><span></span>
+                    
+                    <span>数の子（530）</span><span></span><span></span><span></span>
+                    
+                    <span>揚げなす田楽（二色・赤・白）（各130）</span><span></span><span></span><span></span>
+                    
+                    <span>特選玉子（190）</span><span></span><span></span><span></span>
+                    
+                    <span>アボカド天（240）</span><span></span><span></span><span></span>
+                    
+                    <span>生ハム（オニオン・アボカド）（各240）</span><span></span><span></span><span></span>
+                    
+                    <span>牛カルビ（おろし・照りマヨ・ピリ辛）（240）</span><span></span><span></span><span></span>
+                    
+                    <span>国産とり天（タルタル・梅しそ）（190）</span><span></span><span></span><span></span>
+                    
+                </div>
+            </div>
+        </div>
+        </section>
+
+        <section class="subtitle3" id="store_map">店舗情報</section>
+        <section class="mapgarally">
+        <div class="mapbox">
+            <div class="mapdetails">
+                <li class="maptitle" id="harukomashop"> 春駒・本店</li>
+                <li class="mapsentence" id="harukomatrain"> 最寄り駅：大阪環状線 天満駅など</li>
+                <li class="mapsentence" id="harukomatime"> 営業時間：月・水・木・金・土日祝 11:00~21:30<br>※火 定休日。いずれも、ネタが無くなり次第終了。</li>
+                <li class="mapsentence" id="harukomapay"> 支払方法：現金・クレジットカードのみ</li>
+                <li class="mapsentence" id="harukomareservation"> 予約可否：不可</li>
+            
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3279.898561627858!2d135.5090255753926!3d34.70773838283571!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e6b8b794b45b%3A0x5c61d10a267df043!2z5pil6aeSIOacrOW6lw!5e0!3m2!1sja!2sph!4v1740097686522!5m2!1sja!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    </div>
+    <div class="mapbox">
+        <div class="mapdetails">
+            <li class="maptitle" id="daikoushop"> 大興寿司・本店</li>
+            <li class="mapsentence" id="daikoutrain"> 最寄り駅：大阪環状線 新今宮駅など</li>
+            <li class="mapsentence" id="daikoutime"> 営業時間：月～水・金・土日祝 11:00~21:00<br>※本店：木 定休日、南店：木 通常営業</li>
+            <li class="mapsentence" id="daikoupay"> 支払方法：現金のみ</li>
+            <li class="mapsentence" id="daikoureservation"> 予約可否：平日のみ予約可</li>
+        
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.2005228802277!2d135.50350652539026!3d34.64963848595151!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000dd8ab5872e4f%3A0xd2081686f00b0c31!2z5aSn6IiI5a-_5Y-4IOacrOW6lw!5e0!3m2!1sja!2sph!4v1740098048241!5m2!1sja!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</div>
+
+    <div class="mapbox">
+        <div class="mapdetails">
+            <li class="maptitle" id="dodekashop"> どでか寿司</li>
+            <li class="mapsentence" id="dodekatrain"> 最寄り駅：大阪メトロ谷町線 南森町駅など</li>
+            <li class="mapsentence" id="dodekatime"> 営業時間：月～土 17:00~23:30<br>※日祝 定休日</li>
+            <li class="mapsentence" id="dodekapay"> 支払方法：現金・クレジットカードなど全般可能</li>
+            <li class="mapsentence" id="dodekareservation"> 予約可否：予約可</li>
+        
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13121.15315108462!2d135.49016544684318!3d34.6979079512092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e6c2e2561b79%3A0x14af8782cda9afd9!2z44Gp44Gn44GL5a-_5Y-4!5e0!3m2!1sja!2sph!4v1740098224728!5m2!1sja!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</div>
+
+    <div class="mapbox">
+        <div class="mapdetails">
+            <li class="maptitle" id="sengokushop"> 仙石すし・本店</li>
+            <li class="mapsentence" id="sengokutrain"> 最寄り駅：名鉄本線 名古屋駅など</li>
+            <li class="mapsentence" id="sengokutime"> 営業時間：火～日 11:30~14:00・17:00~21:00<br>※月 定休日</li>
+            <li class="mapsentence" id="sengokupay"> 支払方法：現金・クレジットカードなど全般可能</li>
+            <li class="mapsentence" id="sengokureservation"> 予約可否：予約可</li>
+        
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3261.6186600021147!2d136.8755407754123!3d35.166130058098645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600376e404539451%3A0xed22f42d6da571ea!2z5LuZ55-z44GZ44GXIOacrOW6lw!5e0!3m2!1sja!2sph!4v1740098902864!5m2!1sja!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</div>
+
+    <div class="mapbox">
+        <div class="mapdetails">
+            <li class="maptitle" id="chojiroshop"> にぎり長次郎・芦屋店</li>
+            <li class="mapsentence" id="chojirotrain"> 最寄り駅：阪神本線 打出駅</li>
+            <li class="mapsentence" id="chojirotime"> 営業時間：平日 11:00~15:00・17:00~23:00、土日祝 11:00~23:00</li>
+            <li class="mapsentence" id="chojiropay"> 支払方法：現金・クレジットカードなど全般可能</li>
+            <li class="mapsentence" id="chojiroreservation"> 予約可否：平日のみ予約可</li>
+        
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3278.836184048187!2d135.31356407539369!3d34.73452338139787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000f2ddaea6dd19%3A0xcfce8809b12f259e!2z44Gr44GO44KK6ZW35qyh6YOOIOiKpuWxi-W6lw!5e0!3m2!1sja!2sph!4v1740098878032!5m2!1sja!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</div>
+</section>
+
+        <footer>
+            <small>Copyright &copy; 寿 .inc</small>
+            <div class="social-icons">
+                <!-- Instagram アイコン -->
+                <a href=https://www.instagram.com/nigirichojiro/ target="_blank" class="instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <!-- Twitter アイコン -->
+                <a href="https://www.twitter.com/nigirichojiro/" target="_blank" class="twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <!-- YouTube アイコン -->
+                <a href="https://www.youtube.com/channel/UC_aF1aV9_W5wmVyA4t6XV2g" target="_blank" class="youtube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+        </footer>
+        
+
+
+    </main>
+</div>
+    <script src="./assets/HP.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</body>
+</html>

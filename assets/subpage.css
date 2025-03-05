@@ -1,0 +1,422 @@
+html{
+    background-color: black;
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Serif JP', serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    height: 80px;
+    padding: 10px 10px 0px 10px;
+    position: fixed; /* ヘッダーを固定 */
+    top: 0; /* 上部に配置 */
+    left: 0; /* 左側に配置 */
+    width: 100%; /* 横幅を100%にして画面全体に広がるように */
+    z-index: 9999; /* 最前面に配置 */
+    opacity: 0.9; /*ヘッダー*/
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.language2 {
+    color: white;
+}
+
+/* ハンバーガーメニュを作る */
+.hamburger {
+    width: 50px;
+    height: 70px;
+    position: relative;
+    appearance: none;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    cursor: pointer;
+}
+
+.hamburger span {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 100%;
+    background-color: #fff;
+    transition: all 0.5s;
+}
+
+.hamburger span,
+.hamburger span::before,
+.hamburger span::after {
+position: absolute;
+display: block;
+content: '';
+width: 100%;
+height: 2px;
+background-color: #fff;
+transition: all 0.5s;
+}
+
+.hamburger span::before {
+top: 10px;
+}
+
+.hamburger span::after {
+bottom: 10px;
+}
+
+.hamburger.open span {
+    background-color: transparent;
+}
+
+.hamburger.open span::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.hamburger.open span::after {
+    transform: rotate(-45deg);
+    bottom: 0;
+}
+
+/*メニュー */
+
+.nav {
+    /*ハンバーガーの中身*/
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 70px; /*ハンバーガーが上から７０px*/
+    background-color: black;
+    padding: 5px 10px;
+    transition: all 0.5s;
+    border-top: #fff 1px solid;
+    right: -100%;
+    z-index: 9999; /*ハンバーガーメニューを最前面に*/
+}
+
+.nav.open{
+    right: 0;
+}
+
+.nav__item a {
+    width: auto;
+    background-color: #000000;
+    border-bottom: 2px solid #fff;
+    text-align: center;
+    display: block;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    padding: 25px 0 25px 50px;
+    text-transform: uppercase;
+}
+
+.nav__item a:hover {
+    background-color: #fff;
+    color: black;
+}
+
+.hamburger.open span {
+    background-color: transparent;
+}
+
+.hamburger.open span::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.hamburger.open span::after {
+    transform: rotate(-45deg);
+    bottom: 0;
+}
+
+/* ロゴに関して */
+.logo {
+    height: 70px;
+    padding: 5px 10px 13px 5px;
+}
+
+
+
+.sushi {
+    color: white;
+    font-size: 23px;
+    letter-spacing: 2px;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 40px;
+}
+
+
+#sushisentence2 {
+    color: white;
+    background-image: url(./img/トップ画像ネタ切\ \(2\).jpg);
+    background-color: rgba(51, 50, 50, 0.1);
+    background-size: cover;
+    background-position: center;
+    font-size: 19px;
+    padding: 0 40px;
+    font-weight: bold;
+    text-shadow: 3px 3px 5px rgba(19, 18, 18, 0.7);
+}
+
+h1,h2,h3,h4 {
+    color: white;
+    font-size: 23px;
+    letter-spacing: 2px;
+    text-align: center;
+    padding-top: 40px;
+    margin-bottom: 30px;
+    padding-bottom: 40px;
+}
+
+
+
+.container {
+    display: flex; /* 横並びにする */
+    align-items: flex-start; /* 上に揃える */
+    gap: 20px; /* 写真とテキストの間にスペースを追加 */
+}
+
+.toritonphoto, .uogashiphoto, .uoshinphoto, .hakataphoto {
+    width: 600px;
+    height: 500px;
+}
+
+
+.details-box1 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    flex: 1; /* テキストが残りのスペースを占めるようにする */
+}
+
+.details-box2 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    flex: 1; /* テキストが残りのスペースを占めるようにする */
+    order: -1; /* 詳細文を画像の前に表示 */
+    padding: 0px 15px;
+}
+
+
+.subsentence {
+    margin: 10px;
+    color: white;
+    padding: 0px 10px 10px 10px;
+    margin-left: 10px; /* テキスト間に少しスペース */
+}
+
+@media screen and (max-width: 780px) {
+    h1, h2, h3, h4 {
+        color: white;
+        font-size: 23px;
+        letter-spacing: 2px;
+        text-align: center;
+        padding-top: 40px;
+        margin-bottom: 30px;
+        padding-bottom: 40px;
+    }
+
+    /* 横並びから縦並びに変更 */
+    .container {
+        display: flex;
+        flex-direction: column; /* 縦並びにする */
+        align-items: center; /* 中央揃え */
+        gap: 20px; /* 写真とテキストの間にスペースを追加 */
+    }
+
+    .toritonphoto, .uogashiphoto, .uoshinphoto, .hakataphoto {
+        width: 100%;
+        height: auto;
+    }
+
+    .details-box2 {
+        padding-top: 10px;
+        flex: none; /* テキストがそのままで縦に配置されるように */
+        padding: 0px 15px;
+        order: 1; /* 画像の下にテキストを配置 */
+    }
+
+    .subsentence {
+        margin: 10px;
+        color: white;
+        padding: 0px 10px 10px 10px;
+        margin-left: 0; /* 左マージンをリセット */
+    }
+}
+
+
+
+
+button {
+    size: 10px;
+}
+
+/* 店舗マップ */
+.subtitle3 {
+    color: white;
+    font-size: 23px;
+    letter-spacing: 2px;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+
+.mapgarally {
+    display: flex;  
+    gap: 20px; /* 各ボックス間隔 */
+    padding: 20px;
+    overflow-x: auto; /* 横スクロール可能 */
+    max-width: 100%; /* 横幅が親の幅を超えないように */
+    scroll-behavior: smooth; 
+}
+
+.mapbox {
+    background-color: white;
+    flex: 0 0 auto; /* スクロール時に並びを維持 */
+    width: 400px; /* 各ボックスの幅 */
+}
+
+.maptitle {
+    margin-top: 5px;
+    margin-left: 5px;
+    font-weight: bold; 
+    font-size: 20px; 
+    margin-bottom: 10px; /* タイトルと他リスト項目との間に余白 */
+}
+
+.mapdetails {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mapsentence {
+    margin-left: 5px;
+    font-size: 15px;
+}
+
+/* フッター */
+footer {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    color: black;
+    padding: 20px 0;
+    margin-top: 100px;
+    font-size: 20px;
+}
+
+.social-icons {
+    margin-left: 30px;
+}
+
+.social-icons a {
+    margin: 0 5px;
+    color: black;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: yellow;
+
+}
+
+
+@media screen and (max-width:780px) {
+    .mapgarally {
+        display: flex;  
+        gap: 20px; /* 各ボックス間隔 */
+        padding: 20px;
+        overflow-x: auto; /* 横スクロール可能 */
+        max-width: 100%; /* 横幅が親の幅を超えないように */
+        scroll-behavior: smooth; 
+    }
+    
+    .mapbox {
+        background-color: white;
+        flex: 0 0 auto; /* スクロール時に並びを維持 */
+        width: 350px; /* 各ボックスの幅 */
+        height: 350px;
+    }
+    
+    
+    .maptitle {
+        margin-top: 5px;
+        margin-left: 5px;
+        font-weight: bold; 
+        font-size: 17px; 
+        margin-bottom: 10px; /* タイトルと他リスト項目との間に余白 */
+    }
+    
+    .mapdetails {
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .mapsentence {
+        margin-left: 5px;
+        font-size: 12px;
+    }
+    
+}
+
+
+/* フッター */
+footer {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    color: black;
+    padding: 20px 0;
+    margin-top: 100px;
+    font-size: 20px;
+}
+
+.social-icons {
+    margin-left: 30px;
+}
+
+.social-icons a {
+    margin: 0 5px;
+    color: black;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+.instagram :hover {
+    color: blueviolet;
+}
+
+.twitter :hover {
+    color: skyblue;
+}
+
+.youtube :hover{
+    color: red;
+}
+
+

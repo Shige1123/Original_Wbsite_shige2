@@ -1,0 +1,1163 @@
+html{
+    background-color: black;
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Serif JP', serif;
+}
+
+/* From Uiverse.io by JkHuger */
+@keyframes loader_5191 {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+}
+
+.square {
+    background: #ddd;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -5px;
+    margin-left: -5px;
+}
+
+#sq1 {
+    margin-top: -25px;
+    margin-left: -25px;
+    animation: loader_5191 675ms ease-in-out 0s infinite alternate;
+}
+
+#sq2 {
+    margin-top: -25px;
+    animation: loader_5191 675ms ease-in-out 75ms infinite alternate;
+}
+
+#sq3 {
+    margin-top: -25px;
+    margin-left: 15px;
+    animation: loader_5191 675ms ease-in-out 150ms infinite;
+}
+
+#sq4 {
+    margin-left: -25px;
+    animation: loader_5191 675ms ease-in-out 225ms infinite;
+}
+
+#sq5 {
+    animation: loader_5191 675ms ease-in-out 300ms infinite;
+}
+
+#sq6 {
+    margin-left: 15px;
+    animation: loader_5191 675ms ease-in-out 375ms infinite;
+}
+
+#sq7 {
+    margin-top: 15px;
+    margin-left: -25px;
+    animation: loader_5191 675ms ease-in-out 450ms infinite;
+}
+
+#sq8 {
+    margin-top: 15px;
+    animation: loader_5191 675ms ease-in-out 525ms infinite;
+}
+
+#sq9 {
+    margin-top: 15px;
+    margin-left: 15px;
+    animation: loader_5191 675ms ease-in-out 600ms infinite;
+}
+
+  /* ロード中のコンテンツは非表示 */
+#content {
+    display: none;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    height: 80px;
+    padding: 10px 10px 0px 10px;
+    position: fixed; /* ヘッダーを固定 */
+    top: 0; /* 上部に配置 */
+    left: 0; /* 左側に配置 */
+    width: 100%; /* 横幅を100%にして画面全体に広がるように */
+    z-index: 9999; /* 最前面に配置 */
+    opacity: 0.9; /*ヘッダー*/
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.language {
+    color: white;
+}
+
+
+/* ハンバーガーメニュを作る */
+.hamburger {
+    width: 50px;
+    height: 70px;
+    position: relative;
+    appearance: none;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    cursor: pointer;
+}
+
+.hamburger span {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transition: all 0.5s;
+}
+
+.hamburger span,
+.hamburger span::before,
+.hamburger span::after {
+position: absolute;
+display: block;
+content: '';
+width: 100%;
+height: 2px;
+background-color: #fff;
+transition: all 0.5s;
+}
+
+.hamburger span::before {
+top: 10px;
+}
+
+.hamburger span::after {
+bottom: 10px;
+}
+
+.hamburger.open span {
+    background-color: transparent;
+}
+
+.hamburger.open span::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.hamburger.open span::after {
+    transform: rotate(-45deg);
+    bottom: 0;
+}
+
+/*メニュー */
+
+.nav {
+    /*ハンバーガーの中身*/
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 70px; /*ハンバーガーが上から７０px*/
+    background-color: black;
+    padding: 20px 10px;
+    transition: all 0.5s;
+    border-top: #fff 1px solid;
+    right: -100%;
+    z-index: 9999; /*ハンバーガーメニューを最前面に*/
+}
+
+.nav.open{
+    right: 0;
+}
+
+.nav__item a {
+    width: auto;
+    background-color: #000000;
+    border-bottom: 2px solid #fff;
+    text-align: center;
+    display: block;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    padding: 25px 0 30px 50px;
+    text-transform: uppercase;
+}
+
+.nav__item a:hover {
+    background-color: #fff;
+    color: black;
+}
+
+.hamburger.open span {
+    background-color: transparent;
+}
+
+.hamburger.open span::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.hamburger.open span::after {
+    transform: rotate(-45deg);
+    bottom: 0;
+}
+
+/* ロゴに関して */
+.logo {
+    height: 70px;
+    padding: 5px 10px 13px 5px;
+}
+
+
+
+/* 各店舗名前 */
+.image-details h2,
+.image-details h3,
+.image-details h4,
+.image-details h5,
+.image-details h6 {
+    color: white;
+    font-size: 30px !important;
+}
+
+/* タイトルに関して */
+.title {
+    background-image: url(./img/関西から世界へ.png);
+    font-family: "ヒラギノ丸ゴ ProN";
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 43vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+    z-index: 10;
+    /* アニメーションのための初期状態 */
+    opacity: 0; /* 最初は透明 */
+    transform: translateY(50px); /* 少し下からスタート */
+    animation: fadeInUp 1.5s ease-out forwards; /* アニメーションの適用 */
+    margin-top: 90px;
+    margin-bottom: 20px;
+}
+
+/* アニメーションの定義 */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px); /* 最初は下にあり、透明 */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* 最終的に元の位置に戻る */
+    }
+}
+
+.aboutsushi {
+    color: white;
+    font-size: 23px;
+    letter-spacing: 2px;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+
+
+#sushisentence {
+    color: white;
+    background-image: url(./img/日本の誇り鮨2.jpg);
+    background-color: rgba(51, 50, 50, 0.1);
+    background-size: cover;
+    background-position: center;
+    font-size: 19px;
+    padding: 0 40px;
+    font-weight: bold;
+    text-shadow: 3px 3px 5px rgba(19, 18, 18, 0.7);
+}
+
+
+
+/* 店舗一覧・2列配置 */
+.sushi-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /*画像を２列に*/
+    gap: 20px;
+    padding: 20px;
+}
+
+.image-box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 追加: スムーズなアニメーション */
+    opacity: 0; /* 最初は透明 */
+    transform: translateY(50px); /* 最初は少し下に表示される */
+}
+
+/* スクロールで表示されるときのアニメーション */
+.image-box.visible {
+    opacity: 1; /* アニメーションで表示 */
+    transform: translateY(0); /* アニメーションで元の位置に戻る */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.image-box:hover {
+    transform: translateY(-10px); /* 追加: 10px上に浮かび上がる */
+    box-shadow: 10px 10px 20px 10px rgba(245, 236, 236, 0.3); /* 追加: 影を強調 */
+}
+
+.image-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease; /* 追加: 画像のズームアニメーション */
+}
+
+.image-box:hover img {
+    transform: scale(1.05); /* 追加: ホバー時に画像を少しズームイン */
+}
+
+.image-details {
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* 半透明の黒背景 */
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    opacity: 0; /* 初期状態では透明 */
+    transition: opacity 0.3s ease; /* 追加: スムーズに表示されるように */
+}
+
+.image-box:hover .image-details {
+    opacity: 1; /* ホバー時に詳細情報を表示 */
+}
+
+/* 店舗一覧 */
+
+.subtitle1 {
+    color: white;
+    font-size: 23px;
+    letter-spacing: 2px;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+
+/* 店舗詳細 */
+.subtitle2 {
+    color: white;
+    font-size: 23px;
+    letter-spacing: 2px;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#details1,#details2,#details3,#details4,#details5,#details6 {
+    border: 3px solid rgba(233, 227, 227, 0.662);
+    margin: 30px;
+    width: 80%;
+    background-color: rgba(117, 115, 115, 0.6);
+    scroll-margin-top: 100px;
+}
+
+/* 春駒の詳細 */
+
+#details1 > h2 {
+    font-size: 40px;
+    text-align: center;
+    color: white;
+    padding: 20px  0px 20px 0px;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+}
+
+
+.harukomadetails > img {
+    height: 250px;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.harukomadetails {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center;
+
+}
+
+.harukomacentence {
+    text-align: left;
+    font-size: 15px;
+    width: 50%;
+    padding-right: 10px;
+}
+
+@media screen and (max-width:780px) {
+    .title {
+        background-image: url(./img/関西から世界へ.png);
+        background-size: cover;
+        background-position: center;
+        width: 200vw;
+        height: 30vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 50px;
+        font-weight: bold;
+        text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+        z-index: 10;
+        /* アニメーションのための初期状態 */
+        opacity: 0; /* 最初は透明 */
+        transform: translateY(50px); /* 少し下からスタート */
+        animation: fadeInUp 1.5s ease-out forwards; /* アニメーションの適用 */
+        margin-top: 80px;
+        margin-bottom: 30px;
+    }
+
+
+    #sushisentence {
+        color: white;
+        background-image: url(./img/日本の誇り鮨.webp);
+        background-color: rgba(51, 50, 50, 0.1);
+        background-size: cover;
+        background-position: center;
+        font-size: 14px;
+        padding: 0 40px;
+        font-weight: bold;
+        text-shadow: 3px 3px 5px rgba(19, 18, 18, 0.7);
+    }
+
+
+    #details1 > h2 {
+        font-size: 30px;
+        text-align: center;
+        color: white;
+        padding: 20px  0px 20px 0px;
+        text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+    }
+
+    .harukomadetails > img {
+        height: 250px;
+        width: 75%;
+        border-radius: 25px;
+        padding-bottom: 20px;
+    }
+
+    .harukomadetails {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center; 
+        align-items: center;
+    }
+
+    .harukomacentence {
+        text-align: left;
+        font-size: 15px;
+        width: 90%;
+        padding-right: 10px;
+    }
+
+    #harukoma, #daikousushi, #dodekasushi, #sengokusushi, #chojiro, #other {
+        font-size: 30px;
+    }
+
+    #harukomasubtitle, #daikousushisubtitle, #dodekasushisubtitle, #sengokusushisubtitle, #chojirosubtitle, #othersubtitle {
+        font-size: 15px;
+    }
+}
+
+
+/* 続きを読む */
+
+.oshinagaki {
+    color: white;
+    text-align: center;
+    font-size: 23px;
+    padding-bottom: 10px;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+}
+
+.suboshinagaki {
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    padding-bottom: 10px;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+}
+
+.menu1 {
+    font-size: 16px;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4列に分ける */
+    gap: 10px; /* アイテム間の隙間 */
+    width: 100%;
+    overflow-x: auto; /* 横スクロールを有効にする */
+    padding: 25px 15px 10px 15px;
+    scroll-behavior: smooth; /* スムーズスクロール */
+    white-space: nowrap; /* 子要素が折り返されないように */
+}
+
+.menu1 span {
+    text-align: left;
+    box-sizing: border-box;
+    display: block;
+    width: 100%; /* 幅を親要素に合わせる */
+}
+
+/* 画面が狭くなってもレイアウトが崩れない */
+@media screen and (max-width: 780px) {
+    .menu1 {
+        font-size: 14px;
+        padding: 22px 13px 10px 13px;
+        grid-template-columns: repeat(4, 1fr); /* 4列は維持 */
+        overflow-x: auto; /* 横スクロールを有効にする */
+        white-space: nowrap; /* 子要素が折り返されない */
+    }
+
+    .menu1 span {
+        width: auto;  /* 各アイテムの幅を調整 */
+    }
+}
+
+
+
+
+.readmore {
+    position: relative;
+    margin: 50px auto 0;
+    padding: 0 0 75px;
+}
+
+.readmore label {
+    position: absolute;
+    display: table;
+    left: 50%;
+    bottom: 0;
+    margin: 0 auto;
+    width: 100px;
+    padding: 10px 0;
+    color: #fff;
+    text-align: center;
+    background-color: #333;
+    transform: translateX(-50%);
+    cursor: pointer;
+    z-index: 1;
+}
+
+.readmore label::before{
+    content: '☟';
+}
+
+.readmore input[type="checkbox"]:checked ~ label::before {
+    content: '☝';
+}
+
+.readmore input[type="checkbox"]{
+    display: none;
+}
+
+.readmore-content {
+    position: relative;
+    height: 70px;
+    overflow: hidden;
+}
+
+.readmore input[type="checkbox"]:checked ~ .readmore-content {
+    height: auto;
+}
+
+
+
+
+
+/* 大興寿司に関して */
+
+#details2 > h3 {
+    font-size: 40px;
+        text-align: center;
+        color: white;
+        padding: 20px  0px 20px 0px;
+        text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+}
+
+.daikoudetails > img {
+    height: 250px;
+    border-radius: 25px;
+    padding-bottom: 20px;
+}
+
+.daikoudetails {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.daikoucentence {
+    color: white;
+    text-align: left;
+    font-size: 15px;
+    width: 50%;
+    padding-right: 10px;
+}
+
+@media screen and (max-width:780px) {
+    #details2 > h3 {
+        font-size: 30px;
+        text-align: center;
+        color: white;
+        padding: 20px  0px 20px 0px;
+        text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+    }
+
+    .daikoudetails > img {
+        height: 250px;
+        width: 70%;
+        border-radius: 25px;
+        padding-bottom: 20px;
+    }
+
+    .daikoudetails {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center; 
+        align-items: center;
+    }
+
+    .daikoucentence {
+        text-align: left;
+        font-size: 15px;
+        width: 90%;
+        padding-right: 10px;
+    }
+}
+
+
+
+
+.readmore1 {
+    position: relative;
+    margin: 50px auto 0;
+    padding: 0 0 75px;
+}
+
+.readmore1 label {
+    position: absolute;
+    display: table;
+    left: 50%;
+    bottom: 0;
+    margin: 0 auto;
+    width: 100px;
+    padding: 10px 0;
+    color: #fff;
+    text-align: center;
+    background-color: #333;
+    transform: translateX(-50%);
+    cursor: pointer;
+    z-index: 1;
+}
+
+.readmore1 label::before{
+    content: '☟';
+}
+
+.readmore1 input[type="checkbox"]:checked ~ label::before {
+    content: '☝';
+}
+
+.readmore1 input[type="checkbox"]{
+    display: none;
+}
+
+.readmore1-content {
+    position: relative;
+    height: 70px;
+    overflow: hidden;
+}
+
+.readmore1 input[type="checkbox"]:checked ~ .readmore1-content {
+    height: auto;
+}
+
+
+/* どでか寿司 */
+#details3 > h4 {
+    font-size: 40px;
+        text-align: center;
+        color: white;
+        padding: 20px  0px 20px 0px;
+        text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+}
+
+.dodekadetails > img {
+    height: 250px;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.dodekadetails {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center;
+
+}
+
+.dodekacentence {
+    color: white;
+    text-align: left;
+    font-size: 15px;
+    width: 50%;
+    padding-right: 10px;
+}
+
+
+@media screen and (max-width:780px) {
+    #details3 > h4 {
+        font-size: 30px;
+        text-align: center;
+        color: white;
+        padding: 20px  0px 20px 0px;
+        text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+    }
+
+    .dodekadetails > img {
+        height: 250px;
+        width: 70%;
+        border-radius: 25px;
+        padding: 10px;
+    }
+
+    .dodekadetails {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center; 
+        align-items: center;
+    }
+
+    .dodekacentence {
+        text-align: left;
+        font-size: 15px;
+        width: 90%;
+        padding-right: 10px;
+    }
+}
+
+
+.readmore2 {
+    position: relative;
+    margin: 50px auto 0;
+    padding: 0 0 75px;
+}
+
+.readmore2 label {
+    position: absolute;
+    display: table;
+    left: 50%;
+    bottom: 0;
+    margin: 0 auto;
+    width: 100px;
+    padding: 10px 0;
+    color: #fff;
+    text-align: center;
+    background-color: #333;
+    transform: translateX(-50%);
+    cursor: pointer;
+    z-index: 1;
+}
+
+.readmore2 label::before{
+    content: '☟';
+}
+
+.readmore2 input[type="checkbox"]:checked ~ label::before {
+    content: '☝';
+}
+
+.readmore2 input[type="checkbox"]{
+    display: none;
+}
+
+.readmore2-content {
+    position: relative;
+    height: 70px;
+    overflow: hidden;
+}
+
+.readmore2 input[type="checkbox"]:checked ~ .readmore2-content {
+    height: auto;
+}
+
+
+/* 仙石すし */
+#details4 > h5 {
+    font-size: 40px;
+        text-align: center;
+        color: white;
+        padding: 20px  0px 20px 0px;
+        text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+}
+
+.sengokudetails > img {
+    height: 250px;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+.sengokudetails {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.sengokucentence {
+    color: white;
+    text-align: left;
+    font-size: 15px;
+    width: 50%;
+    padding-right: 10px;
+}
+
+
+@media screen and (max-width:780px) {
+    #details4 > h5 {
+        font-size: 30px;
+        text-align: center;
+        color: white;
+        padding: 20px  0px 20px 0px;
+        text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+    }
+
+    .sengokudetails > img {
+        height: 250px;
+        width: 70%;
+        border-radius: 25px;
+        padding: 10px;
+    }
+
+    .sengokudetails {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sengokucentence {
+        text-align: left;
+        font-size: 15px;
+        width: 90%;
+        padding-right: 10px;
+    }
+}
+
+
+.readmore3 {
+    position: relative;
+    margin: 50px auto 0;
+    padding: 0 0 75px;
+  }
+  
+.readmore3 label {
+    position: absolute;
+    display: table;
+    left: 50%;
+    bottom: 0;
+    margin: 0 auto;
+    width: 100px;
+    padding: 10px 0;
+    color: #fff;
+    text-align: center;
+    background-color: #333;
+    transform: translateX(-50%);
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .readmore3 label::before{
+    content: '☟';
+  }
+  
+  .readmore3 input[type="checkbox"]:checked ~ label::before {
+    content: '☝';
+  }
+  
+  .readmore3 input[type="checkbox"]{
+    display: none;
+  }
+  
+  .readmore3-content {
+    position: relative;
+    height: 70px;
+    overflow: hidden;
+  }
+  
+  .readmore3 input[type="checkbox"]:checked ~ .readmore3-content {
+    height: auto;
+  }
+
+
+/* 長次郎 */
+#details5 > h6 {
+    font-size: 40px;
+    text-align: center;
+    color: white;
+    padding: 20px  0px 20px 0px;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+}
+
+.chojirodetails > img {
+    height: 250px;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+.chojirodetails {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.chojirocentence {
+    color: white;
+    text-align: left;
+    font-size: 15px;
+    width: 50%;
+}
+
+@media screen and (max-width:780px) {
+    #details5 > h6 {
+        font-size: 30px;
+        text-align: center;
+        color: white;
+        padding: 20px  0px 20px 0px;
+        text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+    }
+
+    .chojirodetails > img {
+        height: 250px;
+        width: 70%;
+        border-radius: 25px;
+        padding: 10px;
+    }
+
+    .chojirodetails {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .chojirocentence {
+        text-align: left;
+        font-size: 15px;
+        width: 90%;
+        padding-right: 10px;
+    }
+}
+
+.readmore4 {
+    position: relative;
+    margin: 50px auto 0;
+    padding: 0 0 75px;
+  }
+  
+.readmore4 label {
+    position: absolute;
+    display: table;
+    left: 50%;
+    bottom: 0;
+    margin: 0 auto;
+    width: 100px;
+    padding: 10px 0;
+    color: #fff;
+    text-align: center;
+    background-color: #333;
+    transform: translateX(-50%);
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .readmore4 label::before{
+    content: '☟';
+  }
+  
+  .readmore4 input[type="checkbox"]:checked ~ label::before {
+    content: '☝';
+  }
+  
+  .readmore4 input[type="checkbox"]{
+    display: none;
+  }
+  
+  .readmore4-content {
+    position: relative;
+    height: 70px;
+    overflow: hidden;
+  }
+  
+  .readmore4 input[type="checkbox"]:checked ~ .readmore4-content {
+    height: auto;
+  }
+
+
+/* 店舗マップ */
+.subtitle3 {
+    color: white;
+    font-size: 23px;
+    letter-spacing: 2px;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+
+.mapgarally {
+    display: flex;  
+    gap: 20px; /* 各ボックス間隔 */
+    padding: 20px;
+    overflow-x: auto; /* 横スクロール可能 */
+    max-width: 100%; /* 横幅が親の幅を超えないように */
+    scroll-behavior: smooth; 
+}
+
+.mapbox {
+    background-color: white;
+    flex: 0 0 auto; /* スクロール時に並びを維持 */
+    width: 400px; /* 各ボックスの幅 */
+}
+
+
+.maptitle {
+    margin-top: 5px;
+    margin-left: 5px;
+    font-weight: bold; 
+    font-size: 20px; 
+    margin-bottom: 10px; /* タイトルと他リスト項目との間に余白 */
+}
+
+.mapdetails {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mapsentence {
+    margin-left: 5px;
+    font-size: 15px;
+}
+
+@media screen and (max-width:780px) {
+    .mapgarally {
+        display: flex;  
+        gap: 20px; /* 各ボックス間隔 */
+        padding: 20px;
+        overflow-x: auto; /* 横スクロール可能 */
+        max-width: 100%; /* 横幅が親の幅を超えないように */
+        scroll-behavior: smooth; 
+    }
+    
+    .mapbox {
+        background-color: white;
+        flex: 0 0 auto; /* スクロール時に並びを維持 */
+        width: 350px; /* 各ボックスの幅 */
+        height: 350px;
+    }
+    
+    
+    .maptitle {
+        margin-top: 5px;
+        margin-left: 5px;
+        font-weight: bold; 
+        font-size: 17px; 
+        margin-bottom: 10px; /* タイトルと他リスト項目との間に余白 */
+    }
+    
+    .mapdetails {
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .mapsentence {
+        margin-left: 5px;
+        font-size: 12px;
+    }
+    
+}
+
+/* フッター */
+footer {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    color: black;
+    padding: 20px 0;
+    margin-top: 100px;
+    font-size: 20px;
+}
+
+.social-icons {
+    margin-left: 30px;
+}
+
+.social-icons a {
+    margin: 0 5px;
+    color: black;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+.instagram :hover {
+    color: blueviolet;
+}
+
+.twitter :hover {
+    color: skyblue;
+}
+
+.youtube :hover{
+    color: red;
+}
+
