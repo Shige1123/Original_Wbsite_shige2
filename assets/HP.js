@@ -304,8 +304,8 @@ document.getElementById('logo-icon').addEventListener('click', function() {
         //各店舗の詳細説明
 
 
-        toritontoptitle2: "Conveyor Belt Sushi Restraunt TORITON<br>（HOKKAIDO）",
-        toritondetail: "　'Conveyor belt sushi restraunt Toriton' is a sushi restaurant that originated in Hokkaido. The restraunt is full of energy and smiles because they always consider how to entertain the customers. <br><br>　According to the company's efforts, you can enjoy the sushi with reasonable price. Some of the main menu items are tuna (270), salmon (220), sweet shrimp (170), Hokkaido octopus legs (270), Hokkaido raw hokki gunkan (270), Hokkaido scallops (310), and Hokkaido salmon roe marinated in soy sauce (430) (all served as 2 pieces per plate, excluding tax). The favorite sushi for foreigners  is Seafood salad gunkan and Salmon.<br><br>　In addition to Hokkaido region, there are three branches in Tokyo: Atre Shinagawa, Skytree Town Solamachi, and Ikebukuro Tobu, so you can enjoy the same quality without having to visit Hokkaido.",
+        toritontoptitle2: "TORITON<br>（HOKKAIDO）",
+        toritondetail: "　'Toriton' is a sushi restaurant that originated in Hokkaido. The restraunt is full of energy and smiles because they always consider how to entertain the customers. <br><br>　According to the company's efforts, you can enjoy the sushi with reasonable price. Some of the main menu items are tuna (270), salmon (220), sweet shrimp (170), Hokkaido octopus legs (270), Hokkaido raw hokki gunkan (270), Hokkaido scallops (310), and Hokkaido salmon roe marinated in soy sauce (430) (all served as 2 pieces per plate, excluding tax). The favorite sushi for foreigners  is Seafood salad gunkan and Salmon.<br><br>　In addition to Hokkaido region, there are three branches in Tokyo: Atre Shinagawa, Skytree Town Solamachi, and Ikebukuro Tobu, so you can enjoy the same quality without having to visit Hokkaido.",
 
         uogashitoptitle2: "UOGASHI SYOKUDO<br>（KANAZAWA）",
         uogashidetail: "　Ishikawa Prefecture has the rich seafood ground. The environment of ocean allows wide variety of seafood to be landed. Among them, Nodoguro (rosy seabass), known as the KING of white body fish, is so famous. <br><br>　Ishikawa Pref., especially Kanazawa City, is one of the leading sighseeing spots in Japan. If you focus only on seafood, you will find the Omicho Ichiba（Omichi Market） about 10 minutes from Kanazawa Station. However, although the market is the famous tourist destination where you can enjoy eating and walking around, the prices of foods have skyrocketed due to the influx of tourists from both Japan and abroad.<br><br>　Therefore, the locals recommend another market called the Kanazawa Chuou Ichiba（Central Wholesale Market）, located about 20 minutes on foot from the Omicho Market. At that area, 'Uogashi Shokudo' serves high-quality seafood bowls and sushi at low prices.",
@@ -512,15 +512,16 @@ function changeLanguage() {
 function changeSubtitleForMobile() {
     // 画面幅が480px以下の場合
     if (window.innerWidth <= 480) {
-        document.getElementById('harukomasubtitle').textContent = '大阪天満のNO.1江戸前寿司';
-        document.getElementById('daikousushisubtitle').textContent = '大阪天王寺で鮪が3貫150円';
-        document.getElementById('dodekasushisubtitle').textContent = '超新鮮ネタを驚愕サイズで';
-        document.getElementById('sengokusushisubtitle').textContent = '名古屋最強「映え海鮮丼」';
-        document.getElementById('chojirosubtitle').textContent = '長次郎でちょっといい日に';
-        document.getElementById('other').textContent = '日本寿司名店';
+        document.getElementById('harukomasubtitle').textContent = '大阪最高峰江戸前寿司';
+        document.getElementById('daikousushisubtitle').textContent = '天王寺で鮪が3貫150円';
+        document.getElementById('dodekasushisubtitle').textContent = '驚愕サイズな超新鮮ネタ';
+        document.getElementById('sengokusushisubtitle').textContent = '名古屋最強映え海鮮丼';
+        document.getElementById('chojirosubtitle').textContent = 'ちょっといい日に';
+        document.getElementById('other').innerHTML = '日本<br>寿司名店';
         document.getElementById('othersubtitle').textContent = '北海道・北陸・博多';
         document.getElementById('sushisentence').innerHTML = '<br>　「寿司」は日本食文化を象徴する代表的な料理の一つであることは言うまでもない。「寿司」の種類は大きく分けて握り・軍艦・巻・押し・ちらしの5つに分類される。<br><br>　「寿司」は言わずもがな、その鮮度と素材の良さがクオリティを大きく左右する。料理人は魚の選定に非常に慎重を期し、適切なタイミングで仕入れることが重要である。また、寿司はその味だけでなく、見た目にも美しさが求められるため、「寿司」は単なる料理ではなく、一種の芸術性を帯びた作品とも言える。<br><br>　「寿司」は、海外でも多くの寿司屋が見られるほど世界中で人気な食べ物の一つとなっている。ここでは、老若男女・国内外を問わず様々な人々が気軽に足を運ぶことができる、関西圏の誇る最強寿司屋を5つ紹介しよう。<br><br>';
         document.getElementById('subchojiro').textContent = '※西京極店など一部店舗は別メニュー※';
+        document.getElementById('chojirotoptitle').innerHTML = '長次郎'
     } else {
         // それ以外の画面幅の場合は元のテキストに戻す
         document.getElementById('harukomasubtitle').textContent = '大阪屈指の飲み屋街である天満に位置する、コスパ最強江戸前寿司';
@@ -531,8 +532,8 @@ function changeSubtitleForMobile() {
         document.getElementById('other').textContent = 'その他の寿司処';
         document.getElementById('othersubtitle').textContent = '日本寿司名店録（北海道・石川・福井・福岡）';
         document.getElementById('sushisentence').innerHTML = '<br>　「寿司」は日本食文化を象徴する代表的な料理の一つであることは言うまでもない。一般的に「寿司」と耳にすると思い浮かぶのは「握り寿司」だろうが、「寿司」の種類は大きく分けて握り・軍艦・巻・押し・ちらしの5つに分類される。巻寿司は海苔で具材を巻いた形態で手軽に食べることができるため、家庭でも「手巻き寿司」や節分の「恵方巻」として振る舞われることもしばしばあるだろう。<br><br>　「寿司」は言わずもがな、その鮮度と素材の良さがクオリティを大きく左右する。料理人は魚の選定に非常に慎重を期し、適切なタイミングで仕入れることが重要である。仕入れた当日の鮮度が旨味の直結するものもあれば、数日間寝かせたり、昆布締めなど施すことにより身や旨味が凝縮されるものもある。また、寿司はその味だけでなく、見た目にも美しさが求められる。板前は握る際に手の温度や力加減、水分量に配慮し、ネタの大きさとシャリのバランスを考慮したうえで、素材の味を最大限に引き立てるように工夫を凝らす。そのため、「寿司」は単なる料理ではなく、一種の芸術性を帯びた作品とも言える。<br><br>　「寿司」は、海外でも多くの寿司屋が見られるほど世界中で人気な食べ物の一つとなっている。ここでは、老若男女・国内外を問わず様々な人々が気軽に足を運ぶことができる、関西圏の誇る最強寿司屋を5つ紹介しよう。<br><br>';
+        document.getElementById('chojirotoptitle').textContent = 'にぎり長次郎';
         document.getElementById('subchojiro').textContent = '※廻転寿司CHOJIRO・にぎり長次郎 西京極店は一部別メニュー※';
-        document.getElementById('').textContent = '';
         document.getElementById('').textContent = '';
     }
 }

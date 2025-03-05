@@ -219,7 +219,7 @@ h1,h2,h3,h4 {
     margin-left: 10px; /* テキスト間に少しスペース */
 }
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 480px) {
     h1, h2, h3, h4 {
         color: white;
         font-size: 23px;
@@ -341,7 +341,7 @@ footer {
 }
 
 
-@media screen and (max-width:780px) {
+@media screen and (max-width:480px) {
     .mapgarally {
         display: flex;  
         gap: 20px; /* 各ボックス間隔 */
@@ -376,6 +376,19 @@ footer {
     .mapsentence {
         margin-left: 5px;
         font-size: 12px;
+    }
+
+    .sushi {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .sushi, .sub {
+        font-size: 18px;
+    }
+
+    .sushisentence2 {
+        font-size: 14px;
     }
     
 }
