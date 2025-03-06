@@ -139,16 +139,16 @@ document.getElementById('logo-icon').addEventListener('click', function() {
         //ハンバーガーメニュー欄
         
         humberger0: "日本寿司名店録",
-        humberger11: "回転寿司 トリトン<br>（北海道）",
-        humberger12: "魚がし食堂<br>（石川県）",
-        humberger13: "魚心<br>（福井県）",
-        humberger14: "博多豊一<br>（福岡県）",
+        humberger11: "回転寿司 トリトン<br>（北海道・北見市）",
+        humberger12: "魚がし食堂<br>（石川県・金沢市）",
+        humberger13: "魚心<br>（福井県・福井市）",
+        humberger14: "博多豊一<br>（福岡県・博多市）",
         humberger15: "店舗情報",
 
         //寿司の説明その２
 
         sushitop2: "日本寿司名店録",
-        sushisentence2: "<br>　街中の老舗寿司屋などを訪ねることはハードルが高いと考えたり、その雰囲気に恐れ入ってしまう人が多いだろう。実際、寿司というのは嗜好品であり、決して庶民的な食事とは言い難く、寿司屋を想像すると、どうしても堅苦しいイメージと直結してしまう。<br><br>　しかし、日本列島には関西圏に留まらず、お手頃な価格で寿司が頂ける名店が各地に眠っている。北海道や北陸地方（富山県・石川県・福井県など）は言わずもがな、福岡県も海鮮で有名な地だ。これらの地を旅で訪れた際に、ぜひとも立ち寄っていただきたい寿司屋を幾らかばかり紹介しよう。<br><br>",
+        sushisentence2: "<br>　街中の老舗寿司屋などを訪ねることはハードルが高いと考えたり、その雰囲気に恐れ入ってしまう人が多いだろう。実際、寿司というのは嗜好品であり、決して庶民的な食事とは言い難く、寿司屋を想像すると、どうしても堅苦しいイメージと直結してしまう。<br><br>　しかし、日本列島には関西圏に留まらず、気軽に訪店できてお手頃な価格で寿司が頂ける名店が各地に眠っている。北海道や北陸地方（富山県・石川県・福井県など）は言わずもがな、福岡県も海鮮で有名な地だ。これらの地を旅で訪れた際に、ぜひとも立ち寄っていただきたい寿司屋を幾らかばかり紹介しよう。<br><br>",
 
 
 
@@ -198,12 +198,12 @@ document.getElementById('logo-icon').addEventListener('click', function() {
 
     },
     en: {
-        humberger1: "Symbol of Japanese Food Culture",
-        humberger2: "Sushi Restaurant List",
-        humberger3: "Sushi Restaurant Details",
-        humberger4: "Sushi Restaurant Information",
+        humberger1: "SYMBOL of JAPANESE FOOD CULTURE",
+        humberger2: "LIST of SUSHI RESTRAUNT",
+        humberger3: "DETAILS of SUSHI RESTRAUNT",
+        humberger4: "INFORMATION of SUSHI RESTRAUNT",
         sushitop: "Symbol of Japanese Food Culture",
-        sushisentence: "<br>　It goes without saying that sushi is one of the most representative dishes that symbolize Japanese food culture. When you hear the word sushi, you probably think of nigiri sushi, but sushi can be broadly divided into five types: nigiri, gunkan, maki（rolled）, oshi（pushed）, and chirashi. <br><br>　It goes without saying that the quality of sushi is greatly affected by its freshness and the quality of the ingredients. Sushi Chefs must be very careful when selecting fish and purchase them at the right time because the type of fish available to catch and the level of its flavor vary depending on the season. In addition, sushi is required to be beautiful not only in taste but also in appearance. When making the sushi, the Sushi chefs take into consideration the temperature of their hands, the strength of his hands, and the amount of moisture, and also considers the balance between the size of the topping and the rice, and makes every effort to bring out the flavor of the ingredients to the fullest. For this reason, sushi is not just food, but can also be considered one kind work of art. <br><br>　Sushi has become one of the most popular foods in the world, with many sushi restaurants now found overseas. Here, we will introduce five of the best sushi restaurants in the Kansai region that are casually people from Japan or overseas could visit.<br><br>",
+        sushisentence: "<br>　It goes without saying that sushi is one of the most representative dishes that symbolize Japanese food culture. When you hear the word sushi, you probably think of nigiri sushi, but sushi can be broadly divided into five types: nigiri, gunkan, maki（rolled）, oshi（pushed）, and chirashi. <br><br>　Needless to say, the quality of sushi is greatly affected by its freshness and the quality of the ingredients. Sushi Chefs must be very careful when selecting fish and purchase them at the right time because the type of fish available to catch and the level of its flavor vary depending on the season. In addition, sushi is required to be beautiful not only in taste but also in appearance. When making the sushi, the Sushi chefs take into consideration the temperature of their hands, the strength of his hands, and the amount of moisture, and also considers the balance between the size of the topping and the rice, and makes every effort to bring out the flavor of the ingredients to the fullest. For this reason, sushi is not just food, but can also be considered one kind work of art. <br><br>　Sushi has become one of the most popular foods in the world, with many sushi restaurants now found overseas. Here, we will introduce five of the best sushi restaurants in the Kansai region that are casually people from Japan or overseas could visit.<br><br>",
 
         store_list: "LIST of SUSHI RESTRAUNT",
         harukoma: "Harukoma",
@@ -287,7 +287,7 @@ document.getElementById('logo-icon').addEventListener('click', function() {
         //サブページ----------------------------------------------------------------------------
         //HUMBERGER MENU
         
-        humberger0: "THE FINEST SUSHI RESTAURANTS IN JAPAN",
+        humberger0: "THE FINEST SUSHI RESTAURANTS in JAPAN",
         humberger11: "TORITON<br>（HOKKAIDO）",
         humberger12: "UOGASHI SYOKUDO<br>（KANAZAWA）",
         humberger13: "UOSHIN<br>（FUKUI）",
@@ -296,7 +296,7 @@ document.getElementById('logo-icon').addEventListener('click', function() {
 
         //寿司の説明その２
 
-        sushitop2: "THE FINEST SUSHI RESTRAUNT IN JAPAN",
+        sushitop2: "THE FINEST SUSHI RESTRAUNT in JAPAN",
         sushisentence2: "<br>　Sushi is one of the luxury Japanese foods and cannot eat it everyday easily. However, throughout the Japan, not just in the Kansai region, there are renowned sushi restaurants where you can enjoy sushi at reasonable prices. Hokkaido and the Hokuriku region（Kanazawa city, Fukui city and so on） go without saying, and Hakata city is also famous for its seafood. <br><br>　I would like to introduce a few sushi restaurants that you should definitely visit when you travel to these areas. I hope you to enjoy all over the Japan from Japanese foods to spectacular sighseeing spot! Also, I would like you say 'I want to come back Japan Again!!'<br><br>",
 
 
