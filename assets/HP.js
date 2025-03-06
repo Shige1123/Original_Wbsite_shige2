@@ -148,7 +148,7 @@ document.getElementById('logo-icon').addEventListener('click', function() {
         //寿司の説明その２
 
         sushitop2: "日本の随所に眠る至高の寿司屋",
-        sushisentence2: "<br>　街中の老舗寿司屋などを訪ねることはハードルが高いと考えたり、その雰囲気に恐れ入ってしまう人が多いだろう。実際、寿司というのは嗜好品であり、決して庶民的な食事とは言い難い。また、寿司屋を想像すると、どうしても堅苦しいイメージと直結してしまう。<br><br>　しかし、日本列島には関西圏に留まらず、お手頃な価格で寿司が頂ける名店が各地に眠っている。北海道や北陸地方（富山県・石川県・福井県など）は言わずもがな、福岡県も海鮮で有名な地だ。これらの地を旅で訪れた際に、ぜひとも立ち寄っていただきたい寿司屋を幾らかばかり紹介しよう。<br><br>",
+        sushisentence2: "<br>　街中の老舗寿司屋などを訪ねることはハードルが高いと考えたり、その雰囲気に恐れ入ってしまう人が多いだろう。実際、寿司というのは嗜好品であり、決して庶民的な食事とは言い難く、寿司屋を想像すると、どうしても堅苦しいイメージと直結してしまう。<br><br>　しかし、日本列島には関西圏に留まらず、お手頃な価格で寿司が頂ける名店が各地に眠っている。北海道や北陸地方（富山県・石川県・福井県など）は言わずもがな、福岡県も海鮮で有名な地だ。これらの地を旅で訪れた際に、ぜひとも立ち寄っていただきたい寿司屋を幾らかばかり紹介しよう。<br><br>",
 
 
 
@@ -205,17 +205,17 @@ document.getElementById('logo-icon').addEventListener('click', function() {
         sushitop: "Symbol of Japanese Food Culture",
         sushisentence: "<br>　It goes without saying that sushi is one of the most representative dishes that symbolize Japanese food culture. When you hear the word sushi, you probably think of nigiri sushi, but sushi can be broadly divided into five types: nigiri, gunkan, maki（rolled）, oshi（pushed）, and chirashi. <br><br>　It goes without saying that the quality of sushi is greatly affected by its freshness and the quality of the ingredients. Sushi Chefs must be very careful when selecting fish and purchase them at the right time because the type of fish available to catch and the level of its flavor vary depending on the season. In addition, sushi is required to be beautiful not only in taste but also in appearance. When making the sushi, the Sushi chefs take into consideration the temperature of their hands, the strength of his hands, and the amount of moisture, and also considers the balance between the size of the topping and the rice, and makes every effort to bring out the flavor of the ingredients to the fullest. For this reason, sushi is not just food, but can also be considered one kind work of art. <br><br>　Sushi has become one of the most popular foods in the world, with many sushi restaurants now found overseas. Here, we will introduce five of the best sushi restaurants in the Kansai region that are casually people from Japan or overseas could visit.<br><br>",
 
-        store_list: "SUSHI RESTAURANT LIST",
-        harukoma: "Edo-style Nigiri Sushi Harukoma（OSAKA）",
-        harukomasubtitle: "Located in one of the famous drinking quarter, Tenma, Osaka",
-        daikousushi: "Daikou Sushi（OSAKA）",
+        store_list: "LIST of SUSHI RESTRAUNT",
+        harukoma: "Harukoma",
+        harukomasubtitle: "One of the most famous sushi restraunt in Osaka",
+        daikousushi: "Daikou Sushi",
         daikousushisubtitle: "Serving 3pieces of tuna sushi, ￥150 only!!",
-        dodekasushi: "Dodeka Sushi（OSAKA）",
+        dodekasushi: "Dodeka Sushi",
         dodekasushisubtitle: "All kinds of Menu（Sushi & Rolled Sushi） are so BIG！",
-        sengokusushi: "Sengoku Sushi（NAGOYA）",
-        sengokusushisubtitle: "The Most Famous Sushi Restaurant In NAGOYA City",
-        chojiro: "Nigiri Chojiro（HYOGO）",
-        chojirosubtitle: "Expensive conveyor belt sushi restaurant, famous in Kansai area",
+        sengokusushi: "Sengoku Sushi",
+        sengokusushisubtitle: "Instagrammable Seafood Bowl",
+        chojiro: "Nigiri Chojiro",
+        chojirosubtitle: "Expensive conveyor belt sushi restaurant",
         other: "Except KANSAI Region",
         othersubtitle: "HOKKAIDO・KANAZAWA・FUKUI・HAKATA",
         oshinagaki: "JAPANESE MENU<br>（￥）",
@@ -225,60 +225,60 @@ document.getElementById('logo-icon').addEventListener('click', function() {
         oshinagaki5: "JAPANESE MENU<br>（￥）",
 
 
-        store_details: "SUSHI RESTAURANT DETAILS",
+        store_details: "DETAILS of SUSHI RESTRAUNT",
 
         harukomatoptitle: "Edo-style Nigiri Sushi Harukoma（OSAKA）",
         harukomatoptitledetail: "　'Harukoma' is an Edomae sushi restaurant located in Tenma area. In the Tenma area, where many sushi restaurants are lined up, it is the No.1 sushi restaurant in the area, with long lines at both the main store and branch all day long. <br><br>　There are an impressive more than 100 types of menu, and each sushi topping is so large. In addition, the main store's specialty, clam red miso soup, is filled with many and large clams. It's the most popular side dish. Whenever you go, you have to wait in line many hours, however, it's worth to visit.",
         
-        daikousushitoptitle: "DAIKOU SUSHI（OSAKA）",
+        daikousushitoptitle: "DAIKOU SUSHI<br>（OSAKA）",
         daikousushitoptitledetail: "　Daiko Sushi is located in the Tennoji area, which is the thirdest famous sightseeing spots in Osaka. You can enjoy sushi made by a skilled chef, and the price is so reasobable. You can eat 3 pieces of tuna at ￥150. Another attractive feature is that the most employee could speak English, so you won't be confused the way to order or asking some questions. <br><br>　In addition, you can visit Daikou Sushi restraunt befor or after you enjoy the sightseeing spots called Shinsekai, Tsutenkaku and Abeno Harukas because the restraunt is located in Tennnoji area as mentioned earlier.",
         
-        dodekasushitoptitle: "DODEKA SUSHI（OSAKA）",
+        dodekasushitoptitle: "DODEKA SUSHI<br>（OSAKA）",
         dodekasushitoptitledetail: "　'Dodeka Sushi' is located in Minamimorimachi, one stop from Osaka Station on the Osaka Metro Tanimachi（T） Line. The meaning of Dodeka is BIG in English, so the English name of this restraunt is 'BIG SUSHI'. As the name suggests, the sushi they serve is so big. <br><br>　Of course, nigiri sushi is so big, inaddition, the rolled sushi is also naturally big, so you're sure to be satisfied no matter what menu you choose. ",
         
         sengokusushitoptitle: "SENGOKU SUSHI（NAGOYA）",
         sengokusushitoptitledetail: "　Nagoya also has a long-established sushi restaurant with the best value for money. 'Sengoku Sushi' is conveniently located just a 5-minute walk from Nagoya Station. Not only during dinner time, but during lunch time as well, many customers from all over the country now visit the restaurant in search of an impressive seafood bowl that looks great on social media. <br><br>　The most popular menu item during lunch hours is the Seasonal Special Lunch Seafood Bowl. It is a masterpiece that includes about 8 types of fresh. Also, when you visit Nagoya, you can enjoy the specific local foods: Miso Tonkatsu, Kishimen（kind of noodles）, Hitsumabushi.",
         
-        chojirotoptitle: "NIGIRI CHOJIRO（HYOGO）",
+        chojirotoptitle: "NIGIRI CHOJIRO<br>（HYOGO）",
         chojirotoptitledetail: "　Although 'Chojiro' is a chain restaurant that operates mainly in the Kansai region as a conveyor belt sushi restaurant, the quality is comparable to that of sushi restaurants with only a counter seating restraunt. The signature dish, Bluefin Tuna Feast, as well as the Fresh Horse Mackerel and Live Abalone, which are taken out of the tank and cooked immediately after recieved the order, are extremely fresh. In addition to the regular menu, seasonal dishes are regularly updated, so sometimes high-end ingredients such as ark shell, tiger prawn, and botan shrimp are also on the menu. <br><br>　You order the menu from the tablet that compatible with English, Chinese and Korean, so you don't have to talk with staff and you can order easily.",
 
         subchojiro: "※SOME RESTAURANT HAVE THE DIFFERENT MENU and PRICE※",
 
 
-        store_map: "SUSHI RESTAURANT INFORMATION",
+        store_map: "INFORMATION of SUSHI RESTRAUNT",
         
         
         harukomashop: "Harukoma（OSAKA）",
         harukomatrain: "STA: Osaka Loop Line, Tenma sta.",
-        harukomatime: "TME: Except on Fri. 11:00~21:30",
+        harukomatime: "OPE: Except on Fri. 11:00~21:30",
         harukomapay: "PMT: Cash, Credit Card",
         harukomareservation: "RSV: Unavailable",
 
 
         daikoushop: "Daikou Sushi（OSAKA）",
         daikoutrain: "STA: Osaka Loop Line, Tennoji sta.",
-        daikoutime: "TME: Except on Thu. 11:00~21:00",
+        daikoutime: "OPE: Except on Thu. 11:00~21:00",
         daikoupay: "PMT: Cash only",
         daikoureservation: "RSV: Available only on Weekdays",
 
 
         dodekashop: "Dodeka Sushi（OSAKA）",
         dodekatrain: "STA: Osaka Metro（T）, Minamimorimachi sta.",
-        dodekatime: "TME: Except on Sun. 17:00~23:30",
+        dodekatime: "OPE: Except on Sun. 17:00~23:30",
         dodekapay: "PMT: All things Available",
         dodekareservation: "RSV: Available",
 
 
         sengokushop: "Sengoku Sushi（NAGOYA）",
         sengokutrain: "STA: Meitetsu, Nagoya sta.",
-        sengokutime: "TME: Except on Mon. 11:30~14:00・17:00~21:00",
+        sengokutime: "OPE: Except on Mon. 11:30~14:00・17:00~21:00",
         sengokupay: "PMT: All things Available",
         sengokureservation: "RSV: Available",
 
 
         chojiroshop: "Nigiri Chojiro（HYOGO）",
         chojirotrain: "STA: Hanshin Rail Way, Uchide sta.",
-        chojirotime: "TME: Weekdays 11:00~15:00・17:00~23:00, Weekends 11:00~23:00",
+        chojirotime: "OPE: Weekdays 11:00~15:00・17:00~23:00, Weekends 11:00~23:00",
         chojiropay: "PMT: All things Available",
         chojiroreservation: "RSV: Available only on Weekdays",
 
@@ -321,25 +321,25 @@ document.getElementById('logo-icon').addEventListener('click', function() {
 
         toritonmap: "TORITON（HOKKADIO）",
         toritontrain: "STA: Hokkaido Kitami bus, Miwa bus stop",
-        toritontime:"TME: Everyday 11:00~22:00",
+        toritontime:"OPE: Everyday 11:00~22:00",
         toritonpay: "PMT: Except Electronic money",
         toritonreservation: "RSV: Unabailable",
 
         uogashimap: "UOGASHI SYOKUDO（KANAZAWA）",
         uogashitrain: "STA: JR Hokuriku Line, Kanazawa sta.",
-        uogashitime: "TME: Except on Wed. 11:00~15:00・17:00~21:30",
+        uogashitime: "OPE: Except on Wed. 11:00~15:00・17:00~21:30",
         uogashipay: "PMT: Cash Only",
         uogashireservation: "RSV: Available",
 
         uoshinmap: "UOSHIN （FUKUI）",
         uoshintrain: "STA: Echizen Rail Way, Nikkakagakumae sta.",
-        uoshintime: "TME: Weekdays 11:00~14:30・18:00~21:30<br>（Except on Thu.）<br>Weekends 11:00~15:30・17:30~21:30",
+        uoshintime: "OPE: Weekdays 11:00~14:30・18:00~21:30<br>（Except on Thu.）<br>Weekends 11:00~15:30・17:30~21:30",
         uoshinpay: "PMT: Cash・PayPay",
         uoshinreservation: "RSV: Unavailable",
 
         hakatamap: "HAKATA TOYOICHI（HAKATA）",
         hakatatrain: "STA: Fukuoka City Subway, Gofukucho sta. ",
-        hakatatime: "TME: Inquiry  <button> 📞 </button>（092-262-2425）",
+        hakatatime: "OPE: Inquiry  <button> 📞 </button>（092-262-2425）",
         hakatapay: "PMT: Cash Only",
         hakatareservation: "RSV: Unavailable on Sun. and Lunch Time",
 

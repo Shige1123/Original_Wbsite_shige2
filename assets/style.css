@@ -283,6 +283,7 @@ bottom: 10px;
 
 
 #sushisentence {
+    text-align: justify;
     color: white;
     background-image: url(./img/日本の誇り鮨2.jpg);
     background-color: rgba(51, 50, 50, 0.1);
@@ -418,7 +419,7 @@ main {
 }
 
 .harukomacentence {
-    text-align: left;
+    text-align: justify;
     font-size: 15px;
     width: 50%;
     padding-right: 10px;
@@ -456,7 +457,7 @@ main {
 
     /* メニューのアイテムのフォントサイズを小さく */
     .nav__item a {
-        font-size: 18px;
+        font-size: 16px;
         padding: 20px 0;
     }
 
@@ -483,7 +484,7 @@ main {
     .image-details h4,
     .image-details h5,
     .image-details h6 {
-        font-size: 24px !important;
+        font-size: 20px !important;
     }
 
     /* スクエアのアニメーションの速度を少し遅く */
@@ -529,7 +530,7 @@ main {
 
     /* #sushisentenceのフォントサイズとパディングを調整 */
     #sushisentence {
-        font-size: 16px; /* フォントサイズを小さく */
+        font-size: 11px; /* フォントサイズを小さく */
         padding: 0 20px; /* 左右のパディングを減らす */
     }
 
@@ -592,7 +593,7 @@ main {
     }
 
     #details1 > h2 {
-        font-size: 25px;
+        font-size: 23px;
         text-align: center;
         color: white;
         padding: 20px  0px 20px 0px;
@@ -614,8 +615,8 @@ main {
     }
 
     .harukomacentence {
-        text-align: left;
-        font-size: 15px;
+        text-align: justify;
+        font-size: 12px;
         width: 90%;
         padding-right: 10px;
     }
@@ -631,7 +632,7 @@ main {
     }
 
     #harukomasubtitle, #daikousushisubtitle, #dodekasushisubtitle, #sengokusushisubtitle, #chojirosubtitle, #othersubtitle {
-        font-size: 12px;
+        font-size: 11px;
     }
 }
 
@@ -777,7 +778,7 @@ main {
 
 @media screen and (max-width:480px) {
     #details2 > h3 {
-        font-size: 25px;
+        font-size: 23px;
         text-align: center;
         color: white;
         padding: 20px  0px 20px 0px;
@@ -799,8 +800,8 @@ main {
     }
 
     .daikoucentence {
-        text-align: left;
-        font-size: 15px;
+        text-align: justify;
+        font-size: 11px;
         width: 90%;
         padding-right: 10px;
     }
@@ -888,7 +889,7 @@ main {
 
 @media screen and (max-width:480px) {
     #details3 > h4 {
-        font-size: 25px;
+        font-size: 23px;
         text-align: center;
         color: white;
         padding: 20px  0px 20px 0px;
@@ -910,8 +911,8 @@ main {
     }
 
     .dodekacentence {
-        text-align: left;
-        font-size: 15px;
+        text-align: justify;
+        font-size: 11px;
         width: 90%;
         padding-right: 10px;
     }
@@ -996,7 +997,7 @@ main {
 
 @media screen and (max-width:480px) {
     #details4 > h5 {
-        font-size: 25px;
+        font-size: 23px;
         text-align: center;
         color: white;
         padding: 20px  0px 20px 0px;
@@ -1018,8 +1019,8 @@ main {
     }
 
     .sengokucentence {
-        text-align: left;
-        font-size: 15px;
+        text-align: justify;
+        font-size: 11px;
         width: 90%;
         padding-right: 10px;
     }
@@ -1093,16 +1094,16 @@ main {
     align-items: center;
 }
 
-.chojirocentence {
+.chojirosentence {
     color: white;
-    text-align: left;
+    text-align: justify;
     font-size: 15px;
     width: 50%;
 }
 
 @media screen and (max-width:480px) {
     #details5 > h6 {
-        font-size: 25px;
+        font-size: 23px;
         text-align: center;
         color: white;
         padding: 20px  0px 20px 0px;
@@ -1123,9 +1124,9 @@ main {
         align-items: center;
     }
 
-    .chojirocentence {
-        text-align: left;
-        font-size: 15px;
+    .chojirosentence {
+        text-align: justify;
+        font-size: 11px;
         width: 90%;
         padding-right: 10px;
     }
@@ -1282,7 +1283,7 @@ footer {
 .social-icons a {
     margin: 0 5px;
     color: black;
-    font-size: 25px;
+    font-size: 23px;
     text-decoration: none;
 }
 

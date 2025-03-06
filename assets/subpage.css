@@ -161,7 +161,8 @@ bottom: 10px;
 }
 
 
-#sushisentence2 {
+.sushisentence0 {
+    text-align: justify;
     color: white;
     background-image: url(./img/トップ画像ネタ切\ \(2\).jpg);
     background-color: rgba(51, 50, 50, 0.1);
@@ -213,6 +214,7 @@ h1,h2,h3,h4 {
 
 
 .subsentence {
+    text-align: justify;
     margin: 10px;
     color: white;
     padding: 0px 10px 10px 10px;
@@ -220,6 +222,12 @@ h1,h2,h3,h4 {
 }
 
 @media screen and (max-width: 480px) {
+    .nav__item a {
+        font-size: 16px;
+        padding: 20px 0;
+    }
+
+
     h1, h2, h3, h4 {
         color: white;
         font-size: 23px;
@@ -250,16 +258,29 @@ h1,h2,h3,h4 {
         order: 1; /* 画像の下にテキストを配置 */
     }
 
+    .sushisentence0 {
+        font-size: 11px;
+    }
+
     .subsentence {
+        font-size: 11px;
+        text-align: justify;
         margin: 10px;
         color: white;
         padding: 0px 10px 10px 10px;
         margin-left: 0; /* 左マージンをリセット */
     }
+    
 }
 
 
+.uoshininsta {
+    color: black;
+}
 
+.uoshininsta :hover {
+    color: rgb(225, 48, 108);
+}
 
 button {
     size: 10px;
@@ -335,10 +356,6 @@ footer {
     text-decoration: none;
 }
 
-.social-icons a:hover {
-    color: yellow;
-
-}
 
 
 @media screen and (max-width:480px) {
@@ -386,11 +403,6 @@ footer {
     .sushi, .sub {
         font-size: 18px;
     }
-
-    .sushisentence2 {
-        font-size: 14px;
-    }
-    
 }
 
 
