@@ -434,8 +434,12 @@ main {
     }
 
     .emergency {
-        width: 120%;  /* 画像の幅を120%にして大きく表示 */
-        height: auto;  /* 高さは自動調整 */
+        /* 縦横300pxにがっちり固定 */
+        width: 8000px;
+        height: 160px;
+        /* 固定した幅からはみ出たものは隠してしまう */
+        overflow: hidden;
+    
     }
 
 
@@ -522,7 +526,7 @@ main {
     }
 
     /* .aboutsushiのフォントサイズを小さく */
-    .aboutsushi {
+    .aboutsushi,.subtitle1,.subtitle2 {
         font-size: 18px; /* フォントサイズを小さく */
         padding-top: 30px; /* 上部の余白を少し減らす */
         padding-bottom: 20px; /* 下部の余白を少し減らす */
@@ -1223,6 +1227,11 @@ main {
 }
 
 @media screen and (max-width:480px) {
+    .subtitle3 {
+        font-size: 18px;
+    }
+
+
     .mapgarally {
         display: flex;  
         gap: 20px; /* 各ボックス間隔 */

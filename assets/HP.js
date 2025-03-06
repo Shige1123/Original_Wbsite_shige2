@@ -138,7 +138,7 @@ document.getElementById('logo-icon').addEventListener('click', function() {
         
         //ハンバーガーメニュー欄
         
-        humberger0: "日本の随所に眠る至高の寿司屋",
+        humberger0: "日本寿司名店録",
         humberger11: "回転寿司 トリトン<br>（北海道）",
         humberger12: "魚がし食堂<br>（石川県）",
         humberger13: "魚心<br>（福井県）",
@@ -147,7 +147,7 @@ document.getElementById('logo-icon').addEventListener('click', function() {
 
         //寿司の説明その２
 
-        sushitop2: "日本の随所に眠る至高の寿司屋",
+        sushitop2: "日本寿司名店録",
         sushisentence2: "<br>　街中の老舗寿司屋などを訪ねることはハードルが高いと考えたり、その雰囲気に恐れ入ってしまう人が多いだろう。実際、寿司というのは嗜好品であり、決して庶民的な食事とは言い難く、寿司屋を想像すると、どうしても堅苦しいイメージと直結してしまう。<br><br>　しかし、日本列島には関西圏に留まらず、お手頃な価格で寿司が頂ける名店が各地に眠っている。北海道や北陸地方（富山県・石川県・福井県など）は言わずもがな、福岡県も海鮮で有名な地だ。これらの地を旅で訪れた際に、ぜひとも立ち寄っていただきたい寿司屋を幾らかばかり紹介しよう。<br><br>",
 
 
@@ -292,7 +292,7 @@ document.getElementById('logo-icon').addEventListener('click', function() {
         humberger12: "UOGASHI SYOKUDO<br>（KANAZAWA）",
         humberger13: "UOSHIN<br>（FUKUI）",
         humberger14: "HAKATA TOYOICHI<br>（HAKATA）",
-        humberger15: "SUSHI RESTRAUNT INFORMATION",
+        humberger15: "INFORMATION of SUSHI RESTRAUNT",
 
         //寿司の説明その２
 
@@ -317,7 +317,7 @@ document.getElementById('logo-icon').addEventListener('click', function() {
         toyoichidetail: "　Hakata City is also famous for seafood. I chose a unique sushi restaurant here. <br><br>　'Hakata Toyoichi' is a sushi restaurant adjacent to Hakata Port. This restaurant's style is not neither conveyor belt sushi nor counter sushi, but instead they installed a buffet style. Although it is called a buffet, it is not an all-you-can-eat buffet. Inside the restaurant, dozens of types of sushi are displayed in the showcase, from corn gunkan to salmon, swordfish and so on, and all can be enjoyed for 120 yen per piece (excluding tax). <br><br>　The rate of customer is more foreign than Japanese, and even if you visit right after opening, you will be prepared to wait an hour for a long queue.",
 
         //店舗の情報（マップ）
-        submap2: "SUSHI RESTAURANT INFORMATION", 
+        submap2: "INFORMATION of SUSHI RESTRAUNT", 
 
         toritonmap: "TORITON（HOKKADIO）",
         toritontrain: "STA: Hokkaido Kitami bus, Miwa bus stop",

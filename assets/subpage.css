@@ -218,7 +218,6 @@ h1,h2,h3,h4 {
     margin: 10px;
     color: white;
     padding: 0px 10px 10px 10px;
-    margin-left: 10px; /* テキスト間に少しスペース */
 }
 
 @media screen and (max-width: 480px) {
@@ -268,7 +267,6 @@ h1,h2,h3,h4 {
         margin: 10px;
         color: white;
         padding: 0px 10px 10px 10px;
-        margin-left: 0; /* 左マージンをリセット */
     }
     
 }
@@ -359,6 +357,11 @@ footer {
 
 
 @media screen and (max-width:480px) {
+    .subtitle3 {
+        font-size: 18px;
+    }
+
+
     .mapgarally {
         display: flex;  
         gap: 20px; /* 各ボックス間隔 */
