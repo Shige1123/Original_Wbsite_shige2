@@ -435,8 +435,8 @@ main {
 
     .emergency {
         /* 縦横300pxにがっちり固定 */
-        width: 8000px;
-        height: 160px;
+        width: 1000px;
+        height: 170px;
         /* 固定した幅からはみ出たものは隠してしまう */
         overflow: hidden;
     
